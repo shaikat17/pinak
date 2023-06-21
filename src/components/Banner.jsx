@@ -3,10 +3,11 @@ import bannerBg1 from '../assets/shapes/asset 1.png';
 import bannerBg2 from '../assets/shapes/asset 4.png';
 import bannerBg3 from '../assets/shapes/asset 3.png';
 import videoIcon from '../assets/icons/asset 2.png';
+import BannerCards from './BannerCards/BannerCards';
 
 const Banner = () => {
     return (
-            <div className='relative'>
+            <div className='relative bg-white'>
       <img src={bannerBg1} style={{width: '1000px'}} className='absolute left-[-100px] top-8' alt="" />
     <img src={bannerBg2} className='absolute right-[370px] top-40' alt="" />
     <img src={bannerBg3} className='absolute right-[750px] bottom-6' alt="" />
@@ -27,6 +28,13 @@ const Banner = () => {
       </div>
     </div>
   </div>
+
+</div>
+
+{/* Banner bottom cards */}
+
+<div className='relative'>
+      <BannerCards/>
 </div>
             </div>
     );

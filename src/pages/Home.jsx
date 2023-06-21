@@ -5,7 +5,7 @@ import TeamEmailSection from "../components/HomeSections/TeamEmailSection";
 const Home = () => {
   return (
     <>
-      {/* <Banner /> */}
+      <Banner />
       <NewsAndSponsor />
       <TeamEmailSection />
     </>

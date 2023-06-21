@@ -1,8 +1,8 @@
-import { A11y, Navigation, Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-// import { SwiperNavButtons } from "./SwiperNabButtons";
+// import { A11y, Navigation, Pagination } from "swiper";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// // import { SwiperNavButtons } from "./SwiperNabButtons";
 
 const TeamMemberSlider = () => {
   return (
