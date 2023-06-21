@@ -5,7 +5,7 @@ import TeamMemberSlider from "../TeamMemberSlider";
 const TeamEmailSection = () => {
     console.log(bgImage)
     return (
-        <div style={{backgroundImage: `url('${bgImage}')`}} className="h-screen bg-cover flex flex-col items-center justify-center bg-no-repeat bg-center overflow-hidden py-10">
+        <div style={{backgroundImage: `url('${bgImage}')`}} className="bg-cover flex flex-col items-center justify-center bg-no-repeat bg-center overflow-hidden py-10">
             <div className="text-center">
             <p className="my-4 text-lg text-gray-400 font-semibold uppercase">
         Only professional here
