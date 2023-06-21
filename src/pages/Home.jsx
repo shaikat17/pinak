@@ -1,9 +1,12 @@
+import NewsAndSponsor from "../components/HomeSections/NewsAndSponsor";
+import TeamEmailSection from "../components/HomeSections/TeamEmailSection";
 
 
 const Home = () => {
     return (
         <div>
-            <h1 className="text-green-500">Hello From Home</h1>
+            <NewsAndSponsor />
+            <TeamEmailSection />
         </div>
     );
 };

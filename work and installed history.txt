@@ -8,6 +8,7 @@ Shaikat:-
 Package Install:
 1. React Router
 2. Tailwind Css /Daisy UI
+3. Swiper js
 
 
 
