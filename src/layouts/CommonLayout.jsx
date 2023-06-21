@@ -5,11 +5,11 @@ import Footer from "../components/Shared/Footer";
 
 const CommonLayout = () => {
     return (
-        <div className="max-w-screen-xl mx-auto">
+        <>
             <Navbar/>
             <Outlet/>
             <Footer/>            
-        </div>
+        </>
     );
 };
 
