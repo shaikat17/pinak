@@ -5,7 +5,7 @@ import Image3 from "../../assets/images/asset 28.jpeg"
 
 const NewsAndSponsor = () => {
     return (
-        <div style={{backgroundImage: `url('${bgImage}')`}} className="h-screen bg-cover flex flex-col bg-no-repeat bg-center overflow-hidden py-10 px-10">
+        <div style={{backgroundImage: `url('${bgImage}')`}} className="bg-cover flex flex-col bg-no-repeat bg-center overflow-hidden py-10 px-10">
             <div className="">
             <p className="my-4 text-lg text-gray-400 font-semibold uppercase tracking-widest">
         Only professional here
