@@ -1,0 +1,21 @@
+Shaikat:-
+
+
+
+
+
+
+Package Install:
+1. React Router
+2. Tailwind Css /Daisy UI
+
+
+
+
+
+Antu:-
+
+
+
+Package Install:
+1. react icons

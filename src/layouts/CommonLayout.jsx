@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../pages/Shared/Navbar";
-import Footer from "../pages/Shared/Footer";
+import Navbar from "../components/Shared/Navbar";
+import Footer from "../components/Shared/Footer";
 
 
-const Main = () => {
+const CommonLayout = () => {
     return (
         <div className="max-w-screen-xl mx-auto">
             <Navbar/>
@@ -13,4 +13,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default CommonLayout;
