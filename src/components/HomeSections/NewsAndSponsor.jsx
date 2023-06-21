@@ -11,7 +11,7 @@ const NewsAndSponsor = () => {
         Only professional here
         </p>
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-wide">Recent News</h2>
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-3 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-10">
         <div className="card card-compact bg-base-100 shadow-xl rounded">
   <figure className="overflow-hidden"><img className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" src={Image1} alt="Shoes" /></figure>
   <div className="card-body">
