@@ -28,7 +28,7 @@ const IncredibleLayout = () => {
                     <li className='flex items-center gap-4 mt-4 text-lg'><IoCheckmarkCircleOutline/> Many pre-built templates</li>
                 </ul>
                 <p className="pt-8 pb-12 text-slate-400">Bring your website to he ntext level with Infinite. One of the most powerful WordPress Theme on earth!</p>
-                <button className="bg-[#ff5443] text-white px-7 py-3 rounded-full uppercase">learn more</button>
+                <button className="bg-[#ff5443] text-white px-7 py-3 rounded-full uppercase drop-shadow-2xl">learn more</button>
                 </div>
             </div>
             </div>

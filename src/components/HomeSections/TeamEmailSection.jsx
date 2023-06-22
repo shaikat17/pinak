@@ -1,6 +1,6 @@
 import bgImage from "../../assets/shapes/asset 45.jpeg"
 import SubscriptionSection from "../SubscriptionSection";
-import TeamMemberSlider from "../TeamMemberSlider";
+// import TeamMemberSlider from "../TeamMemberSlider";
 
 const TeamEmailSection = () => {
     console.log(bgImage)
@@ -12,7 +12,7 @@ const TeamEmailSection = () => {
         </p>
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-wide">Meet The Team</h2>
             </div>
-            <TeamMemberSlider />
+            {/* <TeamMemberSlider /> */}
             <SubscriptionSection />
         </div>
     );
