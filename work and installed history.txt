@@ -1,5 +1,7 @@
 Shaikat:-
-1. Footer
+1. Footer - responsive
+2. Team and email Subscription Section done - responsive (without slider)
+3. Recent News and client section done - responsive
 
 
 
