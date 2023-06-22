@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+/* Testimonial CSS Start */
+
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
 figure.snip1192 {
@@ -79,8 +81,8 @@ figure.snip1192 .author h5 span {
   text-transform: none;
   display: block;
 }
-
-
 .swiper-pagination {
   display: none;
 }
+
+/* Testimonial CSS End */
