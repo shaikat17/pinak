@@ -85,10 +85,10 @@ const NewsAndSponsor = () => {
         </div>
 
         {/* shape in the middle */}
-        <hr className="text-center mx-auto mt-32" style={{border: '4px solid #DBDBDB', width: '5px', height: '50px', borderRadius: '3px'}} />
+        <hr className="text-center mx-auto mt-20" style={{border: '4px solid #DBDBDB', width: '5px', height: '50px', borderRadius: '3px'}} />
 
         {/* client section */}
-        <div className="mt-32 text-center">
+        <div className="mt-20 text-center">
           <h5 className="text-red-500 uppercase tracking-widest font-medium text-lg">
             Clients really love us
           </h5>
@@ -96,7 +96,7 @@ const NewsAndSponsor = () => {
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts.
           </h4>
-          <div className="flex flex-col sm:flex-row items-center mt-20">
+          <div className="flex flex-col sm:flex-row justify-center items-center mt-20">
             <div>
               <img src={clientImage1} alt="client logos" />
             </div>

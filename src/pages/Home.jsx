@@ -1,12 +1,14 @@
 import Banner from "../components/Banner";
-import NewsAndSponsor from "../components/HomeSections/NewsAndSponsor";
+import NewsAndClients from "../components/HomeSections/NewsAndClients";
 import TeamEmailSection from "../components/HomeSections/TeamEmailSection";
+import TestimonialSection from "../components/HomeSections/TestimonialSection";
 
 const Home = () => {
   return (
     <>
       <Banner />
-      <NewsAndSponsor />
+      <TestimonialSection />
+      <NewsAndClients />
       <TeamEmailSection />
     </>
   );
