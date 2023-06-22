@@ -4,6 +4,7 @@ import TeamEmailSection from "../components/HomeSections/TeamEmailSection";
 // import TestimonialSection from "../components/HomeSections/TestimonialSection";
 import IncredibleLayout from "../components/IncredibleLayout/IncredibleLayout";
 import PowerEliteAuthor from "../components/PowerEliteAuthor";
+import Services from "../components/Services/Services";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Banner />
       <IncredibleLayout />
       <PowerEliteAuthor/>
+      <Services/>
       {/* <TestimonialSection /> */}
       <NewsAndClients />
       <TeamEmailSection />
