@@ -4,7 +4,7 @@ import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
 const IncredibleLayout = () => {
     return (
-        <div className="inc-container bg-white">
+        <div className="inc-container">
             {/* The top of Incredible Layouts */}
             <div className='flex justify-center mt-24'>
             <div className='w-[4px] h-8 rounded-lg bg-slate-300'></div>
