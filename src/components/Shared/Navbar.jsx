@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { FiMenu } from "react-icons/fi";
 
 const Navbar = () => {
     const menu = <>
@@ -12,7 +11,7 @@ const Navbar = () => {
     </>
     return (
         <div >
-           <div className="navbar bg-base-100 py-4 px-8 lg:px-28">
+           <div className="navbar bg-base-100 py-8 px-8 lg:px-28">
     <div className="navbar-start">
     <a className="text-3xl">Pinak Lab</a>
     </div>
@@ -27,7 +26,7 @@ const Navbar = () => {
     </div>
   </div>
   <div className="navbar-end hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 gap-1">
+    <ul className="flex px-1 gap-7 text-lg">
       {menu}
     </ul>
   </div>
