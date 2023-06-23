@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import NewsAndClients from "../components/HomeSections/NewsAndClients";
 import TeamEmailSection from "../components/HomeSections/TeamEmailSection";
-// import TestimonialSection from "../components/HomeSections/TestimonialSection";
+import TestimonialSection from "../components/HomeSections/TestimonialSection";
 import IncredibleLayout from "../components/IncredibleLayout/IncredibleLayout";
 import PowerEliteAuthor from "../components/PowerEliteAuthor";
 import RecentWorks from "../components/RecentWorks/RecentWorks";
@@ -15,7 +15,7 @@ const Home = () => {
       <PowerEliteAuthor/>
       <Services/>
       <RecentWorks/>
-      {/* <TestimonialSection /> */}
+      <TestimonialSection />
       <NewsAndClients />
       <TeamEmailSection />
     </>
