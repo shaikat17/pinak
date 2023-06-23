@@ -23,7 +23,14 @@ const Gallery = () => {
         <h1 className="text-center text-4xl font-black">Our Memories</h1>
         <p className="mt-4 tracking-widest mb-10 text-center text-lg">Without memory, there is no healing. ...</p>
         <div className="photos">
-      {images.map((image, index) => <><img src={image} key={index} /></>)}
+      {images.map((image, index) => {
+        return (
+            <>
+            <img src={image} key={index} />
+            
+            </>
+        )
+      })}
     </div>
     </div>
   );
