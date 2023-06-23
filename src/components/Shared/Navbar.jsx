@@ -8,6 +8,7 @@ const Navbar = () => {
             <li className="text-gray-500 hover:text-black transition duration-300"><Link to=''>About</Link></li>
             <li className="text-gray-500 hover:text-black transition duration-300"><Link to=''>Contacts</Link></li>
             <li className="text-gray-500 hover:text-black transition duration-300"><Link to=''>Blog</Link></li>
+            <li className="text-gray-500 hover:text-black transition duration-300"><Link to='/gallery'>Gallery</Link></li>
     </>
     return (
         <div>

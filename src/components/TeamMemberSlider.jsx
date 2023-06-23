@@ -46,7 +46,7 @@ const TeamMemberSlider = () => {
             <div
               className="h-68 object-fill rounded-t text-center overflow-hidden"
             >
-              <img className="" src="https://images.pexels.com/photos/3785084/pexels-photo-3785084.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+              <img className="" src="https://images.pexels.com/photos/16262441/pexels-photo-16262441/free-photo-of-an-elegant-man-in-a-suit-posing-in-studio.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
             </div>
             <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4">
               <div className="">
@@ -76,7 +76,7 @@ const TeamMemberSlider = () => {
           <div
               className="h-68 object-fill rounded-t text-center overflow-hidden"
             >
-              <img className="" src="https://images.pexels.com/photos/3785084/pexels-photo-3785084.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+              <img className="" src="https://images.pexels.com/photos/4467683/pexels-photo-4467683.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
             </div>
             <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4">
               <div className="">
@@ -106,7 +106,7 @@ const TeamMemberSlider = () => {
           <div
               className="h-68 object-fill rounded-t text-center overflow-hidden"
             >
-              <img className="" src="https://images.pexels.com/photos/3785084/pexels-photo-3785084.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+              <img className="" src="https://images.pexels.com/photos/5999817/pexels-photo-5999817.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
             </div>
             <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4">
               <div className="">
@@ -136,7 +136,7 @@ const TeamMemberSlider = () => {
           <div
               className="h-68 object-fill rounded-t text-center overflow-hidden"
             >
-              <img className="" src="https://images.pexels.com/photos/3785084/pexels-photo-3785084.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+              <img className="" src="https://images.pexels.com/photos/2955376/pexels-photo-2955376.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
             </div>
             <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4">
               <div className="">

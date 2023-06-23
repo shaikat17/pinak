@@ -29,7 +29,7 @@ const NewsAndSponsor = () => {
             <figure className="overflow-hidden">
               <img
                 className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50"
-                src={Image1}
+                src="https://img.freepik.com/free-photo/breathtaking-shot-sunset-along-street-middle-modern-city_181624-10919.jpg?size=626&ext=jpg&ga=GA1.2.1459026864.1687493706&semt=ais"
                 alt="Shoes"
               />
             </figure>
@@ -48,7 +48,7 @@ const NewsAndSponsor = () => {
             <figure className="overflow-hidden">
               <img
                 className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50"
-                src={Image2}
+                src="https://img.freepik.com/free-photo/businessman-working-laptop_23-2147839979.jpg?size=626&ext=jpg&ga=GA1.2.1459026864.1687493706&semt=ais"
                 alt="Shoes"
               />
             </figure>
@@ -67,7 +67,7 @@ const NewsAndSponsor = () => {
             <figure className="overflow-hidden">
               <img
                 className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50"
-                src={Image3}
+                src="https://img.freepik.com/free-photo/businesspeople-working-laptop-office_1098-1672.jpg?size=626&ext=jpg&ga=GA1.2.1459026864.1687493706&semt=ais"
                 alt="Shoes"
               />
             </figure>
