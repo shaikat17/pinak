@@ -3,6 +3,7 @@ import CommonLayout from "../layouts/CommonLayout";
 import Home from "../pages/Home";
 import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
+import ContactUs from "../pages/ContactUs";
 
 
 export const router = createBrowserRouter([
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
         {
           path: "/blog",
           element: <Blog />
+        },
+        {
+          path: "/contact-us",
+          element: <ContactUs />
         }
       ]
     },
