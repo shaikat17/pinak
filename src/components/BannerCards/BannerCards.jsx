@@ -4,7 +4,7 @@ import OptionsIcon from '../../assets/icons/asset 8.png';
 
 const BannerCards = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cold3 justify-center p-8 lg:px-28">
+        <div className="grid grid-cols-1 lg:grid-cols-3 justify-center p-8 lg:px-28">
             <div className="shadow-xl">
   <div className="p-12">
         <img src={TechnologyIcon} alt="" />

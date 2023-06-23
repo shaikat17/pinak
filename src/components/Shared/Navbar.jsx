@@ -10,23 +10,23 @@ const Navbar = () => {
             <li className="text-gray-500 hover:text-black transition duration-300"><Link to=''>Blog</Link></li>
     </>
     return (
-        <div>
-            <div className="navbar bg-white pt-[32px] pb-[32px] px-8 lg:px-28">
-  <div className="navbar-start">
-    <a className="text-2xl text-orange-500 font-bold">Pinak Lab</a>
-  </div>
-  <div className="navbar-end bg-base-100">
-  <div className="dropdown dropdown-end">
+        <div >
+           <div className="navbar bg-base-100 py-4 px-8 lg:px-28">
+    <div className="navbar-start">
+    <a className="text-3xl">Pinak Lab</a>
+    </div>
+  <div className="navbar-end">
+    <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
-        <FiMenu className='text-2xl'/>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabIndex={0} className="menu menu-lg dropdown-content mt-3 p-2 gap-1 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-1">
         {menu}
       </ul>
     </div>
   </div>
   <div className="navbar-end hidden lg:flex">
-    <ul className="flex font-bold px-1 gap-8">
+    <ul className="menu menu-horizontal px-1 gap-1">
       {menu}
     </ul>
   </div>

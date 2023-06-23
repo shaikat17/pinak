@@ -7,9 +7,16 @@ import './Banner.css'
 const Banner = () => {
     return (
             <div className='banner'>
-              <div className="hero bg-white">
+
+              <div className="hero">
   <div className="hero-content flex-col lg:flex-row-reverse !min-w-full p-8 lg:pl-28 lg:pr-20">
+
+    {/* Banner Image */}
+
     <img src={bannerImg} className="hidden lg:block mt-36" />
+
+    {/* Banner Text Container */}
+    
     <div className=''>
       <div className='flex gap-2 mb-10'>
       <hr style={{border: '3px solid silver', width: '30px', borderRadius: '3px'}} />
@@ -30,7 +37,7 @@ const Banner = () => {
 
 {/* Banner bottom cards */}
 
-<div className='relative mt-14'>
+<div className='mt-14'>
       <BannerCards/>
 </div>
             </div>
