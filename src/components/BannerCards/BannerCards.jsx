@@ -4,8 +4,8 @@ import OptionsIcon from '../../assets/icons/asset 8.png';
 
 const BannerCards = () => {
     return (
-        <div className="flex justify-center px-28">
-            <div className=" bg-white shadow-xl">
+        <div className="grid grid-cols-1 lg:grid-cold3 justify-center p-8 lg:px-28">
+            <div className="shadow-xl">
   <div className="p-12">
         <img src={TechnologyIcon} alt="" />
     <h2 className="text-xl text-black font-bold my-5">New Technology</h2>
@@ -13,7 +13,7 @@ const BannerCards = () => {
   </div>
 </div>
 
-<div className=" bg-white shadow-xl">
+<div className="shadow-xl">
   <div className="p-12">
         <img src={CodingIcon} alt="" />
     <h2 className="text-xl text-black font-bold my-5">High Standard Coding</h2>
@@ -21,7 +21,7 @@ const BannerCards = () => {
   </div>
 </div>
 
-<div className=" bg-white shadow-xl">
+<div className="shadow-xl">
   <div className="p-12">
         <img src={OptionsIcon} alt="" />
     <h2 className="text-xl text-black font-bold my-5">Full of Options</h2>

@@ -5,12 +5,12 @@ const PowerEliteAuthor = () => {
     return (
         <div>
             {/* Incredible Layouts */}
-            <div className="hero mt-28">
-            <div className="hero-content flex-col lg:flex-row gap-20">
+            <div className="hero p-8 lg:mt-28">
+            <div className="hero-content flex-col lg:flex-row gap-8 lg:gap-20">
                 <img src={powerEliteAuthor} className="" />
-                <div className='mr-20'>
+                <div className='lg:mr-20'>
                 <h4 style={{letterSpacing: '0.2rem'}} className='text-sm font-bold text-slate-300'>Lorem ipsum dolor sit.</h4>
-                <h1 className="text-5xl font-bold mt-3 text-[#ff5443]">Lorem, ipsum.</h1>
+                <h1 className="text-3xl lg:text-5xl font-bold mt-3 text-[#ff5443]">Lorem, ipsum.</h1>
                 <ul>
                     <li className='flex items-center gap-4 mt-8 text-lg'><IoCheckmarkCircleOutline/> Lorem ipsum dolor sit amet.</li>
                     <li className='flex items-center gap-4 mt-4 text-lg'><IoCheckmarkCircleOutline/> Lorem, ipsum.</li>

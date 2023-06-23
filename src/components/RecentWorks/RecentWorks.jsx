@@ -6,10 +6,10 @@ import ScrollTrigger from "react-scroll-trigger";
 const RecentWorks = () => {
     const [counterOn, setCounterOn] = useState(false);
     return (
-        <div className="mx-28">
+        <div className="mx-8 lg:mx-28">
             <div>
             <h4 style={{letterSpacing: '0.2rem'}} className='text-sm font-bold text-slate-300'>Lorem ipsum dolor sit.3</h4>
-                <h1 className="text-5xl font-bold mt-3">Recent Works</h1>
+                <h1 className="text-3xl lg:text-5xl font-bold mt-3">Recent Works</h1>
             </div>
 
             {/* Scroll Counters */}

@@ -1,4 +1,4 @@
-import Banner from "../components/Banner";
+import Banner from "../components/Banner/Banner";
 import NewsAndClients from "../components/HomeSections/NewsAndClients";
 import TeamEmailSection from "../components/HomeSections/TeamEmailSection";
 import TestimonialSection from "../components/HomeSections/TestimonialSection";
@@ -10,7 +10,7 @@ import Services from "../components/Services/Services";
 const Home = () => {
   return (
     <>
-      <Banner />
+      <Banner/>
       <IncredibleLayout />
       <PowerEliteAuthor/>
       <Services/>

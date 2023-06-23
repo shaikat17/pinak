@@ -11,7 +11,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-white pt-[32px] pb-[32px] px-28">
+            <div className="navbar bg-white pt-[32px] pb-[32px] px-8 lg:px-28">
   <div className="navbar-start">
     <a className="text-2xl text-orange-500 font-bold">Pinak Lab</a>
   </div>
