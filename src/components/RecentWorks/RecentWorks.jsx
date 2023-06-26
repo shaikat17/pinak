@@ -39,65 +39,31 @@ const RecentWorks = () => {
 
       {/* Recent Works Cards */}
 
-      <div>
-        <Carousel responsive={responsive}>
-          <div className=" lg:w-[400px]">
-            <img
-              style={{ width: "400px", height: "400px" }}
-              src={rw1}
-              className="rounded-lg"
-              alt=""
-            />
-            <h3 className="text-xl font-bold text-center mt-6">
-              Lorem, ipsum dolor.
-            </h3>
-          </div>
-          <div className=" lg:w-[400px]">
-            <img
-              style={{ width: "400px", height: "400px" }}
-              src={rw2}
-              className="rounded-lg"
-              alt=""
-            />
-            <h3 className="text-xl font-bold text-center mt-6">
-              Lorem, ipsum dolor.
-            </h3>
-          </div>
-          <div className=" lg:w-[400px]">
-            <img
-              style={{ width: "400px", height: "400px" }}
-              src={rw3}
-              className="rounded-lg"
-              alt=""
-            />
-            <h3 className="text-xl font-bold text-center mt-6">
-              Lorem, ipsum dolor.
-            </h3>
-          </div>
-          <div className=" lg:w-[400px]">
-            <img
-              style={{ width: "400px", height: "400px" }}
-              src={rw4}
-              className="rounded-lg"
-              alt=""
-            />
-            <h3 className="text-xl font-bold text-center mt-6">
-              Lorem, ipsum dolor.
-            </h3>
-          </div>
-          <div className=" lg:w-[400px]">
-            <img
-              style={{ width: "400px", height: "400px" }}
-              src={rw5}
-              className="rounded-lg"
-              alt=""
-            />
-            <h3 className="text-xl font-bold text-center mt-6">
-              Lorem, ipsum dolor.
-            </h3>
-          </div>
-        </Carousel>
-      </div>
+            <div>
+            
+            <Carousel responsive={responsive}>
+            <div className=" lg:w-[400px]">
+                <img style={{width: '400px', height: '400px'}} src={rw1} className="rounded-lg" alt="" />
+                <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
+            </div>
+            <div className=" lg:w-[400px]">
+                <img style={{width: '400px', height: '400px'}} src={rw2} className="rounded-lg" alt="" />
+                <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
+            </div>
+            <div className=" lg:w-[400px]">
+                <img style={{width: '400px', height: '400px'}} src={rw3} className="rounded-lg" alt="" />
+                <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
+            </div>
+            <div className=" lg:w-[400px]">
+                <img style={{width: '400px', height: '400px'}} src={rw4} className="rounded-lg" alt="" />
+                <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
+            </div>
+            <div className=" lg:w-[400px]">
+                <img style={{width: '400px', height: '400px'}} src={rw5} className="rounded-lg" alt="" />
+                <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
+            </div>
+            </Carousel>;
+            </div>
 
       {/* Scroll Counters */}
       <ScrollTrigger onEnter={() => setCounterOn(true)}>
