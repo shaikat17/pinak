@@ -71,7 +71,7 @@ const Banner = () => {
                 {/* The button to open modal */}
                 <label
                   htmlFor="my_modal_7"
-                  className="flex items-center gap-4 text-[#3646a6] font-serif"
+                  className="flex items-center gap-4 text-[#3646a6] font-serif cursor-pointer"
                 >
                   <img src={videoIcon} alt="" /> Video Introduction
                 </label>
