@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
 import ContactUs from "../pages/ContactUs";
+import ErrorPage from "../pages/ErrorPage";
 
 
 export const router = createBrowserRouter([
@@ -29,4 +30,8 @@ export const router = createBrowserRouter([
         }
       ]
     },
+    {
+      path: "*",
+      element: <ErrorPage />
+    }
   ]);
