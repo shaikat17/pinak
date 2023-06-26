@@ -43,32 +43,42 @@ const RecentWorks = () => {
             
             <Carousel responsive={responsive}>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw1} className="rounded-lg" alt="" />
+                <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw1} className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50 rounded-lg" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw2} className="rounded-lg" alt="" />
+                <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw2} className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50 rounded-lg" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw3} className="rounded-lg" alt="" />
+                <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw3} className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50 rounded-lg" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw4} className="rounded-lg" alt="" />
+                <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw4} className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50 rounded-lg" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw5} className="rounded-lg" alt="" />
+                <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw5} className="hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50 rounded-lg" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
-            </Carousel>;
+            </Carousel>
             </div>
 
       {/* Scroll Counters */}
       <ScrollTrigger onEnter={() => setCounterOn(true)}>
         {/* <div className="flex justify-around my-28 text-center"> */}
-        <div className="grid grid-cols-2 md:grid-cols-4 place-items-center my-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 place-items-center my-10 lg:my-20">
           <div className="flex flex-col mb-3 md:mb-0">
               {counterOn && (
                 <h2 className="text-3xl md:text-5xl font-bold text-[#ff5443]">
