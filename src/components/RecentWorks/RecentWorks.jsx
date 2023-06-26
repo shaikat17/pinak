@@ -24,7 +24,7 @@ const RecentWorks = () => {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     },
-  };
+  }
   return (
     <div className="mx-8 lg:mx-28">
       <div className="mb-20">
