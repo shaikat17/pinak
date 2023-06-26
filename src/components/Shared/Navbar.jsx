@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const menu = <>
-            <li className="text-gray-500 hover:text-black transition duration-300"><Link to='/'>Home</Link></li>
-            <li className="text-gray-500 hover:text-black transition duration-300"><Link to=''>Products</Link></li>
-            <li className="text-gray-500 hover:text-black transition duration-300"><Link to='/about-us'>About</Link></li>
-            <li className="text-gray-500 hover:text-black transition duration-300"><Link to='/contact-us'>Contacts</Link></li>
-            <li className="text-gray-500 hover:text-black transition duration-300"><Link to='/team'>Team</Link></li>
-            <li className="text-gray-500 hover:text-black transition duration-300"><Link to='/blog'>Blog</Link></li>
-            <li className="text-gray-500 hover:text-black transition duration-300"><Link to='/gallery'>Gallery</Link></li>
+            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/'>Home</Link></li>
+            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to=''>Products</Link></li>
+            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/about-us'>About</Link></li>
+            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/contact-us'>Contacts</Link></li>
+            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/team'>Team</Link></li>
+            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/blog'>Blog</Link></li>
+            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/gallery'>Gallery</Link></li>
     </>
     return (
         <div >
            <div className="navbar bg-base-100 py-8 px-8 lg:px-28">
     <div className="navbar-start">
-    <a className="text-3xl">Pinak Lab</a>
+    <Link to="/" className="text-4xl font-black">Pinak Lab</Link>
     </div>
   <div className="navbar-end">
     <div className="dropdown dropdown-end">

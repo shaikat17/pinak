@@ -24,7 +24,7 @@ const RecentWorks = () => {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     },
-  };
+  }
   return (
     <div className="mx-8 lg:mx-28">
       <div className="mb-20">
@@ -62,7 +62,7 @@ const RecentWorks = () => {
                 <img style={{width: '400px', height: '400px'}} src={rw5} className="rounded-lg" alt="" />
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
-            </Carousel>;
+            </Carousel>
             </div>
 
       {/* Scroll Counters */}
