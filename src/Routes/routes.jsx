@@ -5,7 +5,7 @@ import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
 import ContactUs from "../pages/ContactUs";
 import ErrorPage from "../pages/ErrorPage";
-import Team from "../pages/Team";
+import Team from "../pages/Team/Team";
 import AboutUs from "../pages/AboutUs";
 
 
