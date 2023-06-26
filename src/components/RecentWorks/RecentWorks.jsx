@@ -30,7 +30,7 @@ const RecentWorks = () => {
         <div className="mx-8 lg:mx-28">
             <div className="mb-20">
             <h4 style={{letterSpacing: '0.2rem'}} className='text-sm font-bold text-slate-300'>Lorem ipsum dolor sit.3</h4>
-                <h1 className="text-3xl lg:text-5xl font-bold mt-3">Recent Works</h1>
+                <h1 className="text-3xl lg:text-5xl font-bold mt-3">Lorem, ipsum.</h1>
             </div>
 
             {/* Recent Works Cards */}
