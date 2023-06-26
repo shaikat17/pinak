@@ -18,8 +18,8 @@ const Team = () => {
                 <img src="https://a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2016/05/psinfinite9-700x500.jpg" className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
                 </figure>
                 <div className="mx-5">
-                <h3 className="text-xl font-bold">DAVID PARKER</h3>
-                <p className="text-gray-500 mt-2 mb-5">Lorem, ipsum dolor.</p>
+                <h3 className="text-xl mt-8 mb-2 font-bold">DAVID PARKER</h3>
+                <p className="text-gray-500 mb-5">Lorem, ipsum dolor.</p>
                 <hr style={{border: '1px solid silver', width: '50px', borderRadius: '3px'}} />
                 <p className="text-gray-500 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sit debitis! Doloremque dolor expedita, eaque ullam odit non enim reprehenderit!</p>
                 <div className="flex gap-3 text-[#ff5443] text-xl">
@@ -34,8 +34,8 @@ const Team = () => {
                 <img src="https://a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2016/05/psinfinite8-1-700x500.jpg" className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
                 </figure>
                 <div className="mx-5">
-                <h3 className="text-xl font-bold">DAVID PARKER</h3>
-                <p className="text-gray-500 mt-2 mb-5">Lorem, ipsum dolor.</p>
+                <h3 className="text-xl mt-8 mb-2 font-bold">DAVID PARKER</h3>
+                <p className="text-gray-500 mb-5">Lorem, ipsum dolor.</p>
                 <hr style={{border: '1px solid silver', width: '50px', borderRadius: '3px'}} />
                 <p className="text-gray-500 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sit debitis! Doloremque dolor expedita, eaque ullam odit non enim reprehenderit!</p>
                 <div className="flex gap-3 text-[#ff5443] text-xl">
@@ -50,8 +50,8 @@ const Team = () => {
                 <img src="https://a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2016/05/psinfinite7-700x500.jpg" className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
                 </figure>
                 <div className="mx-5">
-                <h3 className="text-xl font-bold">DAVID PARKER</h3>
-                <p className="text-gray-500 mt-2 mb-5">Lorem, ipsum dolor.</p>
+                <h3 className="text-xl mt-8 mb-2 font-bold">DAVID PARKER</h3>
+                <p className="text-gray-500 mb-5">Lorem, ipsum dolor.</p>
                 <hr style={{border: '1px solid silver', width: '50px', borderRadius: '3px'}} />
                 <p className="text-gray-500 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sit debitis! Doloremque dolor expedita, eaque ullam odit non enim reprehenderit!</p>
                 <div className="flex gap-3 text-[#ff5443] text-xl">
@@ -66,8 +66,8 @@ const Team = () => {
                 <img src="https://a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2016/05/psinfinite9-700x500.jpg" className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
                 </figure>
                 <div className="mx-5">
-                <h3 className="text-xl font-bold">DAVID PARKER</h3>
-                <p className="text-gray-500 mt-2 mb-5">Lorem, ipsum dolor.</p>
+                <h3 className="text-xl mt-8 mb-2 font-bold">DAVID PARKER</h3>
+                <p className="text-gray-500 mb-5">Lorem, ipsum dolor.</p>
                 <hr style={{border: '1px solid silver', width: '50px', borderRadius: '3px'}} />
                 <p className="text-gray-500 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sit debitis! Doloremque dolor expedita, eaque ullam odit non enim reprehenderit!</p>
                 <div className="flex gap-3 text-[#ff5443] text-xl">
@@ -82,8 +82,8 @@ const Team = () => {
                 <img src="https://a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2016/05/psinfinite8-1-700x500.jpg" className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
                 </figure>
                 <div className="mx-5">
-                <h3 className="text-xl font-bold">DAVID PARKER</h3>
-                <p className="text-gray-500 mt-2 mb-5">Lorem, ipsum dolor.</p>
+                <h3 className="text-xl mt-8 mb-2 font-bold">DAVID PARKER</h3>
+                <p className="text-gray-500 mb-5">Lorem, ipsum dolor.</p>
                 <hr style={{border: '1px solid silver', width: '50px', borderRadius: '3px'}} />
                 <p className="text-gray-500 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sit debitis! Doloremque dolor expedita, eaque ullam odit non enim reprehenderit!</p>
                 <div className="flex gap-3 text-[#ff5443] text-xl">
@@ -98,8 +98,8 @@ const Team = () => {
                 <img src="https://a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2016/05/psinfinite7-700x500.jpg" className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
                 </figure>
                 <div className="mx-5">
-                <h3 className="text-xl font-bold">DAVID PARKER</h3>
-                <p className="text-gray-500 mt-2 mb-5">Lorem, ipsum dolor.</p>
+                <h3 className="text-xl mt-8 mb-2 font-bold">DAVID PARKER</h3>
+                <p className="text-gray-500 mb-5">Lorem, ipsum dolor.</p>
                 <hr style={{border: '1px solid silver', width: '50px', borderRadius: '3px'}} />
                 <p className="text-gray-500 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sit debitis! Doloremque dolor expedita, eaque ullam odit non enim reprehenderit!</p>
                 <div className="flex gap-3 text-[#ff5443] text-xl">
