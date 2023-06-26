@@ -10,7 +10,7 @@ const Services = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 lg:px-28 gap-14 text-center lg:mt-20 mb-20 lg:mb-32'>
             {/* Service 1 */}
             <div className='grid justify-items-center gap-5'>
-                <img src={design} alt="" />
+                <img src={design} className='' alt="" />
                 <h3 className='text-lg font-bold text-[#ff5443]'>Lorem, ipsum dolor.</h3>
                 <p className='text-slate-400'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque consectetur, inventore tempore nihil et cupiditate?</p>
             </div>

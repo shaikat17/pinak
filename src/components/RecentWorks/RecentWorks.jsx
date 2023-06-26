@@ -39,23 +39,33 @@ const RecentWorks = () => {
             
             <Carousel responsive={responsive}>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw1} className="rounded-lg" alt="" />
+                <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw1} className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw2} className="rounded-lg" alt="" />
+            <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw2} className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw3} className="rounded-lg" alt="" />
+            <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw3} className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw4} className="rounded-lg" alt="" />
+            <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw4} className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             <div className=" lg:w-[400px]">
-                <img style={{width: '400px', height: '400px'}} src={rw5} className="rounded-lg" alt="" />
+            <figure className="overflow-hidden">
+                <img style={{width: '400px', height: '400px'}} src={rw5} className="rounded-lg hover:scale-110 hover:transition-all hover:duration-300 transition-all duration-300 hover:brightness-50" alt="" />
+                </figure>
                 <h3 className="text-xl font-bold text-center mt-6">Lorem, ipsum dolor.</h3>
             </div>
             </Carousel>;

@@ -5,6 +5,7 @@ import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
 import ContactUs from "../pages/ContactUs";
 import ErrorPage from "../pages/ErrorPage";
+import Team from "../pages/Team";
 
 
 export const router = createBrowserRouter([
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
         {
           path: "/contact-us",
           element: <ContactUs />
+        },
+        {
+          path: '/team',
+          element: <Team/>
         }
       ]
     },
