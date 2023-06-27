@@ -28,7 +28,7 @@ const IncredibleLayout = () => {
                     <li className='flex items-center gap-4 mt-4 text-lg'><IoCheckmarkCircleOutline/> Lorem, ipsum dolor.</li>
                 </ul>
                 <p className="pt-8 pb-12 text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eligendi unde, sint laboriosam incidunt rerum!</p>
-                <button className="bg-[#ff5443] text-white px-7 py-3 rounded-full uppercase drop-shadow-2xl">learn more</button>
+                <button className="bg-gradient-to-r from-yellow-300 to-orange-500 text-white px-7 py-3 rounded-full uppercase drop-shadow-2xl">learn more</button>
                 </div>
             </div>
             </div>

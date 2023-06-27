@@ -65,7 +65,7 @@ const Banner = () => {
                 possimus iste illum!
               </p>
               <div className="flex items-center gap-5 lg:gap-10 mt-6">
-                <Link to="/about-us" className="bg-orange-500 flex items-center justify-center text-white font-serif w-28 h-10 lg:w-40 lg:h-14 rounded-sm">
+                <Link to="/about-us" className="bg-gradient-to-r from-yellow-300 to-orange-500 flex items-center justify-center text-white font-serif w-28 h-10 lg:w-40 lg:h-14 rounded-sm">
                   Learn More
                 </Link>
                 {/* The button to open modal */}

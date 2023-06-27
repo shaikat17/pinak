@@ -15,7 +15,7 @@ import image from "../../assets/images/asset 25.jpeg";
 
 const TestimonialSection = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center bg-gradient-to-b from-[#F9F9F9] to-white my-20">
+    <div className="flex flex-col-reverse md:flex-row items-center bg-gradient-to-b from-[#F9F9F9] to-white my-20 mx-8 lg:mx-28">
       <div className="w-full md:w-2/4 p-10 pt-20">
         <h6 className="text-gray-400 tracking-widest uppercase">
           What they say

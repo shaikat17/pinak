@@ -13,7 +13,7 @@ const PowerfulAdminPanel = () => {
                 <h1 className="text-3xl lg:text-5xl font-bold mt-3">Lorem, ipsum.</h1>
                 <p className='text-slate-500 my-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur voluptate perspiciatis recusandae libero molestiae ut blanditiis excepturi aliquid laudantium velit.</p>
                 
-                <button className="bg-[#ff5443] text-white px-7 py-3 rounded-full uppercase drop-shadow-2xl">learn more</button>
+                <button className="bg-gradient-to-r from-yellow-300 to-orange-500 text-white px-7 py-3 rounded-full uppercase drop-shadow-2xl">learn more</button>
             </div>
             <div className='lg:w-1/2 lg:flex lg:gap-5 mt-20 lg:mt-0'>
                 <div className="text-[#ff5443]">

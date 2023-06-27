@@ -4,7 +4,7 @@ import story from "../assets/images/story.svg";
 
 const AboutUs = () => {
   return (
-    <div className="px-10">
+    <div className="px-8 lg:px-28 mt-5 lg:mt-20">
       {/* react helmet async package for seo */}
       <Helmet>
         <title>Pinak Idea Private Ltd. || About Us</title>

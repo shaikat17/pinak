@@ -1,7 +1,7 @@
 import bgImage from "../../assets/shapes/asset 44.jpeg";
-import Image1 from "../../assets/images/asset 26.jpeg";
-import Image2 from "../../assets/images/asset 27.jpeg";
-import Image3 from "../../assets/images/asset 28.jpeg";
+// import Image1 from "../../assets/images/asset 26.jpeg";
+// import Image2 from "../../assets/images/asset 27.jpeg";
+// import Image3 from "../../assets/images/asset 28.jpeg";
 
 // client logos
 import clientImage1 from "../../assets/images/clients/asset 29.png";
@@ -14,7 +14,7 @@ const NewsAndSponsor = () => {
   return (
     <div
       style={{ backgroundImage: `url('${bgImage}')` }}
-      className="bg-cover flex flex-col bg-no-repeat bg-center overflow-hidden py-10 px-10"
+      className="bg-cover flex flex-col bg-no-repeat bg-center overflow-hidden py-10 px-8 lg:px-28"
     >
       <div className="">
         <p className="my-4 text-lg text-gray-400 font-semibold uppercase tracking-widest">
@@ -24,7 +24,7 @@ const NewsAndSponsor = () => {
           Recent News
         </h2>
         {/* News section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
           <div className="card card-compact bg-base-100 shadow-xl rounded">
             <figure className="overflow-hidden">
               <img
