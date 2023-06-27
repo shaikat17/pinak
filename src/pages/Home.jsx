@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Banner from "../components/Banner/Banner";
 import NewsAndClients from "../components/HomeSections/NewsAndClients";
 import TeamEmailSection from "../components/HomeSections/TeamEmailSection";
@@ -11,6 +12,10 @@ import Services from "../components/Services/Services";
 const Home = () => {
   return (
     <>
+    {/* react helmet async package for seo */}
+    <Helmet>
+        <title>Pinak Idea Private Ltd.</title>
+      </Helmet>
       <Banner/>
       <IncredibleLayout />
       <PowerEliteAuthor/>

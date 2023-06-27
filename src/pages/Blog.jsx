@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FaArrowRight } from "react-icons/fa";
 
 const Blog = () => {
@@ -64,6 +65,11 @@ const Blog = () => {
       },
   ];
   return (
+    <>
+    {/* react helmet async package for seo */}
+    <Helmet>
+        <title>Pinak Idea Private Ltd. || Blog</title>
+      </Helmet>
     <div className="flex flex-col py-10 px-10">
       <div className="">
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-wide">
@@ -105,6 +111,7 @@ const Blog = () => {
 </div>
       </div>
     </div>
+    </>
   );
 };
 

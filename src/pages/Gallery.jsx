@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 const Gallery = () => {
   // Sample image data with different heights and widths
   const images = [
@@ -19,6 +21,11 @@ const Gallery = () => {
   ];
 
   return (
+    <>
+    {/* react helmet async package for seo */}
+    <Helmet>
+    <title>Pinak Idea Private Ltd. || Photo Gallery</title>
+  </Helmet>
     <div className="w-[90%] mx-auto mb-5">
         <h1 className="text-center text-4xl font-black">Our Memories</h1>
         <p className="mt-4 tracking-widest mb-10 text-center text-lg">Without memory, there is no healing. ...</p>
@@ -33,6 +40,7 @@ const Gallery = () => {
       })}
     </div>
     </div>
+    </>
   );
 };
 

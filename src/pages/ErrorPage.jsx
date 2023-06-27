@@ -2,9 +2,15 @@ import Lottie from "lottie-react";
 // lottie annimation
 import lottieAnnimation from "../../public/404.json";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ErrorPage = () => {
   return (
+    <>
+    {/* react helmet async package for seo */}
+    <Helmet>
+        <title>Opps!!! Page Not Found.</title>
+      </Helmet>
     <div className="flex gap-10 flex-col-reverse sm:flex-row text-center p-4 w-full items-center justify-center">
       <div>
         <h1 className="text-6xl font-black">Opps!</h1>
@@ -26,6 +32,7 @@ const ErrorPage = () => {
         
       </div>
     </div>
+    </>
   );
 };
 
