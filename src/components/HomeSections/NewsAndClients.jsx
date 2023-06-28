@@ -9,6 +9,7 @@ import clientImage2 from "../../assets/images/clients/asset 30.png";
 import clientImage3 from "../../assets/images/clients/asset 31.png";
 import clientImage4 from "../../assets/images/clients/asset 32.png";
 import clientImage5 from "../../assets/images/clients/asset 33.png";
+import { Slide } from "react-awesome-reveal";
 
 const NewsAndSponsor = () => {
   return (
@@ -24,6 +25,7 @@ const NewsAndSponsor = () => {
           Recent News
         </h2>
         {/* News section */}
+        <Slide>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
           <div className="card card-compact bg-base-100 shadow-xl rounded">
             <figure className="overflow-hidden">
@@ -83,11 +85,13 @@ const NewsAndSponsor = () => {
             </div>
           </div>
         </div>
+        </Slide>
 
         {/* shape in the middle */}
         <hr className="text-center mx-auto mt-20" style={{border: '4px solid #DBDBDB', width: '5px', height: '50px', borderRadius: '3px'}} />
 
         {/* client section */}
+        <Slide direction="right">
         <div className="mt-20 text-center">
           <h5 className="text-red-500 uppercase tracking-widest font-medium text-lg">
             Clients really love us
@@ -114,6 +118,7 @@ const NewsAndSponsor = () => {
             </div>
           </div>
         </div>
+        </Slide>
       </div>
     </div>
   );

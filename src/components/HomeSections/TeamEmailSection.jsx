@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import bgImage from "../../assets/shapes/asset 45.jpeg";
 import SubscriptionSection from "../SubscriptionSection";
 import TeamMemberSlider from "../TeamMemberSlider";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const TeamEmailSection = () => {
-  console.log(bgImage);
+  // console.log(bgImage);
   return (
     <div
       style={{ backgroundImage: `url('${bgImage}')` }}
@@ -22,7 +23,9 @@ const TeamEmailSection = () => {
         </Link>
       </div>
       <TeamMemberSlider />
+      <Fade direction="up">
       <SubscriptionSection />
+      </Fade>
     </div>
   );
 };
