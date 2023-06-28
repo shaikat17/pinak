@@ -70,13 +70,13 @@ const Blog = () => {
     <Helmet>
         <title>Pinak Idea Private Ltd. || Blog</title>
       </Helmet>
-    <div className="flex flex-col py-10 px-10">
+    <div className="flex flex-col py-10 px-8 lg:px-28">
       <div className="">
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-wide">
           <span className="border-b-2 border-orange-500">Our Blog Posts</span>
         </h2>
         {/* News section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
           {blogPosts.map((blog) => {
             return (
               <>
@@ -105,7 +105,7 @@ const Blog = () => {
             );
           })}
         </div>
-        <div className="join grid grid-cols-2 w-80 mx-auto mt-4">
+        <div className="join grid grid-cols-2 w-80 mx-auto mt-10">
   <button className="join-item btn btn-outline hover:bg-orange-500">Previous</button>
   <button className="join-item btn btn-outline hover:bg-orange-500">Next</button>
 </div>

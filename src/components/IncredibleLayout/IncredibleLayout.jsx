@@ -17,7 +17,9 @@ const IncredibleLayout = () => {
             {/* Incredible Layouts */}
             <div className="hero mt-8 lg:mt-28">
             <div className="hero-content flex-col lg:flex-row-reverse">
+                <div data-aos="fade-left" data-aos-duration="700">
                 <img src={incLayout} className="" />
+                </div>
                 <div className='lg:mr-20'>
                 <h4 style={{letterSpacing: '0.2rem'}} className='text-sm font-bold text-slate-300'>Lorem ipsum dolor sit.</h4>
                 <h1 className="text-3xl lg:text-5xl font-bold mt-3 text-blue-900">Lorem, ipsum.</h1>
@@ -28,7 +30,7 @@ const IncredibleLayout = () => {
                     <li className='flex items-center gap-4 mt-4 text-lg'><IoCheckmarkCircleOutline/> Lorem, ipsum dolor.</li>
                 </ul>
                 <p className="pt-8 pb-12 text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eligendi unde, sint laboriosam incidunt rerum!</p>
-                <button className="bg-[#ff5443] text-white px-7 py-3 rounded-full uppercase drop-shadow-2xl">learn more</button>
+                <button className="bg-gradient-to-r from-yellow-300 to-orange-500 text-white px-7 py-3 rounded-full uppercase drop-shadow-2xl">learn more</button>
                 </div>
             </div>
             </div>

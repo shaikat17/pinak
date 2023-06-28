@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@emotion/react": "^11.11.1",
+=======
+    "aos": "^3.0.0-beta.6",
+>>>>>>> 787338bc241d8ae4f6bd058af9774d37e7ede1b9
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",

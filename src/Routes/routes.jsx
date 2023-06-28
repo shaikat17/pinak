@@ -7,6 +7,7 @@ import ContactUs from "../pages/ContactUs";
 import ErrorPage from "../pages/ErrorPage";
 import Team from "../pages/Team/Team";
 import AboutUs from "../pages/AboutUs";
+import Hirings from "../components/Hirings";
 
 
 export const router = createBrowserRouter([
@@ -38,6 +39,11 @@ export const router = createBrowserRouter([
           
           path: "/about-us",
           element: <AboutUs />
+        },
+        {
+          
+          path: "/hirings",
+          element: <Hirings />
         }
       ]
     },

@@ -32,7 +32,7 @@ const Banner = () => {
           <div className="hero-content flex-col lg:flex-row-reverse !min-w-full p-8 lg:pl-28 lg:pr-20">
             {/* Banner Image */}
 
-            <img src={bannerImg} className="hidden lg:block mt-36" />
+            <img data-aos="fade-down" data-aos-duration="700" src={bannerImg} className="hidden lg:block mt-36" />
 
             {/* Banner Text Container */}
 
@@ -65,7 +65,7 @@ const Banner = () => {
                 possimus iste illum!
               </p>
               <div className="flex items-center gap-5 lg:gap-10 mt-6">
-                <Link to="/about-us" className="bg-orange-500 flex items-center justify-center text-white font-serif w-28 h-10 lg:w-40 lg:h-14 rounded-sm">
+                <Link to="/about-us" className="bg-gradient-to-r from-yellow-300 to-orange-500 flex items-center justify-center text-white font-serif w-28 h-10 lg:w-40 lg:h-14 rounded-sm">
                   Learn More
                 </Link>
                 {/* The button to open modal */}

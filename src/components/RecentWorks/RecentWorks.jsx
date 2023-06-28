@@ -78,7 +78,7 @@ const RecentWorks = () => {
       {/* Scroll Counters */}
       <ScrollTrigger onEnter={() => setCounterOn(true)}>
         {/* <div className="flex justify-around my-28 text-center"> */}
-        <div className="grid grid-cols-2 md:grid-cols-4 place-items-center my-10 lg:my-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center place-items-center my-10 lg:my-20">
           <div className="flex flex-col mb-3 md:mb-0">
               {counterOn && (
                 <h2 className="text-3xl md:text-5xl font-bold text-[#ff5443]">
