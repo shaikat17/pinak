@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     const menu = <>
             <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/'>Home</Link></li>
-            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to=''>Products</Link></li>
             <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/about-us'>About</Link></li>
             <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/contact-us'>Contacts</Link></li>
             <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/team'>Team</Link></li>
             <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/blog'>Blog</Link></li>
             <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/gallery'>Gallery</Link></li>
+            <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"><Link to='/hirings'>Hirings</Link></li>
     </>
     return (
         <div >
