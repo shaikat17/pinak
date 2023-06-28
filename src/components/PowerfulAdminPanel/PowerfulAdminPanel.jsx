@@ -7,7 +7,7 @@ const PowerfulAdminPanel = () => {
         <div className='lg:relative lg:mb-96'>
             <img src={pap} alt="" />
             <div className="container"></div>
-            <div className='lg:absolute top-3/4 lg:flex items-center gap-10 bg-white lg:mx-28 p-10 lg:p-20 shadow-lg'>
+            <div data-aos="zoom-in" data-aos-duration="1500" className='lg:absolute top-3/4 lg:flex items-center gap-10 bg-white lg:mx-28 p-10 lg:p-20 shadow-lg'>
             <div className="lg:w-1/2">
             <h4 style={{letterSpacing: '0.2rem'}} className='text-sm font-bold text-slate-300'>Lorem ipsum dolor sit.3</h4>
                 <h1 className="text-3xl lg:text-5xl font-bold mt-3">Lorem, ipsum.</h1>

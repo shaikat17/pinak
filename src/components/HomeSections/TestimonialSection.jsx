@@ -191,7 +191,7 @@ const TestimonialSection = () => {
         </div>
       </div>
       <div className="w-full md:w-2/4">
-        <img className="2-full" src={image} alt="testimonial" />
+        <img data-aos="fade-left" data-aos-duration="700" className="2-full" src={image} alt="testimonial" />
       </div>
     </div>
   );

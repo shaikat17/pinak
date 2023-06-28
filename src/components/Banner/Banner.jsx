@@ -32,7 +32,7 @@ const Banner = () => {
           <div className="hero-content flex-col lg:flex-row-reverse !min-w-full p-8 lg:pl-28 lg:pr-20">
             {/* Banner Image */}
 
-            <img src={bannerImg} className="hidden lg:block mt-36" />
+            <img data-aos="fade-down" data-aos-duration="700" src={bannerImg} className="hidden lg:block mt-36" />
 
             {/* Banner Text Container */}
 
