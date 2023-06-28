@@ -9,6 +9,9 @@ import PowerfulAdminPanel from "../components/PowerfulAdminPanel/PowerfulAdminPa
 import RecentWorks from "../components/RecentWorks/RecentWorks";
 import Services from "../components/Services/Services";
 
+// Animation Package
+import { Fade } from "react-awesome-reveal";
+
 const Home = () => {
   return (
     <>
@@ -16,7 +19,9 @@ const Home = () => {
     <Helmet>
         <title>Pinak Idea Private Ltd.</title>
       </Helmet>
+      <Fade>
       <Banner/>
+      </Fade>
       <IncredibleLayout />
       <PowerEliteAuthor/>
       <Services/>
