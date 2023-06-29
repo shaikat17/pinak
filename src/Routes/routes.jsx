@@ -9,6 +9,7 @@ import Team from "../pages/Team/Team";
 import AboutUs from "../pages/AboutUs";
 import Hirings from "../components/Hirings";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 
 export const router = createBrowserRouter([
@@ -55,5 +56,9 @@ export const router = createBrowserRouter([
     {
       path: "/login",
       element: <Login />
+    },
+    {
+      path: "/register",
+      element: <Register />
     }
   ]);

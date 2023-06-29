@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div className="lg:flex">
+        <Helmet>
+            <title>Pinak Idea Lab Private Ltd. || Login</title>
+        </Helmet>
       <div className="lg:w-1/2 xl:max-w-screen-sm">
         <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
           <div className="cursor-pointer flex items-center">
@@ -61,8 +65,8 @@ const Login = () => {
               </div>
             </form>
             <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
-              Don't have an account ?{" "}
-              <Link className="cursor-pointer text-indigo-600 hover:text-indigo-800">
+              Don't have an account ?
+              <Link to="/register" className="cursor-pointer text-indigo-600 hover:text-indigo-800">
                 Sign up
               </Link>
             </div>
@@ -78,7 +82,6 @@ const Login = () => {
             data-name="Layer 1"
             viewBox="0 0 528.71721 699.76785"
           >
-            <title>Login</title>
             <rect y="17.06342" width="444" height="657" fill="#535461" />
             <polygon
               points="323 691.063 0 674.063 0 17.063 323 0.063 323 691.063"
