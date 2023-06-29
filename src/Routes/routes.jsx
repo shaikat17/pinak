@@ -8,6 +8,7 @@ import ErrorPage from "../pages/ErrorPage";
 import Team from "../pages/Team/Team";
 import AboutUs from "../pages/AboutUs";
 import Hirings from "../components/Hirings";
+import Login from "../pages/Login";
 
 
 export const router = createBrowserRouter([
@@ -50,5 +51,9 @@ export const router = createBrowserRouter([
     {
       path: "*",
       element: <ErrorPage />
+    },
+    {
+      path: "/login",
+      element: <Login />
     }
   ]);
