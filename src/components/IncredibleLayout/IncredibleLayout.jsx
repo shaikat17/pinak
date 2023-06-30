@@ -20,7 +20,7 @@ const IncredibleLayout = () => {
             {/* Incredible Layouts */}
             <div className="hero mt-8 lg:mt-28">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div data-aos="fade-left" data-aos-duration="700">
+                <div>
                 <img src={incLayout} className="" />
                 </div>
 <div className='lg:mr-20'>

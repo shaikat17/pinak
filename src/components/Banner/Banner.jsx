@@ -16,9 +16,9 @@ const Banner = () => {
             className="w-full h-full"
             src="https://www.youtube.com/embed/9xwazD5SyVg"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
         <label className="modal-backdrop" htmlFor="my_modal_7">
@@ -27,12 +27,12 @@ const Banner = () => {
       </div>
 
       {/* remaining section */}
-      <div className="banner">
+      <div className="banner overflow-hidden">
         <div className="hero">
           <div className="hero-content flex-col lg:flex-row-reverse !min-w-full p-8 lg:pl-28 lg:pr-20">
             {/* Banner Image */}
 
-            <img data-aos="fade-down" data-aos-duration="700" src={bannerImg} className="hidden lg:block mt-36" />
+            <img src={bannerImg} className="hidden lg:block mt-36" />
 
             {/* Banner Text Container */}
 

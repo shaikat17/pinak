@@ -7,7 +7,7 @@ const PowerEliteAuthor = () => {
             {/* Incredible Layouts */}
             <div className="hero p-8 lg:mt-28">
             <div className="hero-content flex-col lg:flex-row gap-8 lg:gap-20">
-                <img data-aos="fade-right" data-aos-duration="700" src={powerEliteAuthor} className="" />
+                <img src={powerEliteAuthor} className="" />
                 <div className='lg:mr-20'>
                 <h4 style={{letterSpacing: '0.2rem'}} className='text-sm font-bold text-slate-300'>Lorem ipsum dolor sit.</h4>
                 <h1 className="text-3xl lg:text-5xl font-bold mt-3 text-[#ff5443]">Lorem, ipsum.</h1>
