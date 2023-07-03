@@ -3,6 +3,8 @@ import Navbar from "../components/Shared/Navbar";
 import Footer from "../components/Shared/Footer";
 import { useEffect, useState } from "react";
 import { HashLoader } from "react-spinners";
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const CommonLayout = () => {
   const [loading, setLoading] = useState(true);
@@ -25,6 +27,7 @@ const CommonLayout = () => {
   return (
     <>
       <Navbar />
+      <ToastContainer />
       <Outlet />
       <Footer />
     </>

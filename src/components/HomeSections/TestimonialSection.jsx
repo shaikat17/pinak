@@ -14,6 +14,7 @@ import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import image from "../../assets/images/asset 25.jpeg";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const TestimonialSection = () => {
   const [name, setName] = useState('')
@@ -24,7 +25,7 @@ const TestimonialSection = () => {
 
   useEffect(() => {
     try {
-      axios("http://localhost:5000/api/testimonial")
+      axios("https://pinak-server.vercel.app/api/testimonial")
       .then(res => setTestimonialData(res.data))
       .catch(err => console.log(err))
     } catch (error) {
@@ -43,8 +44,19 @@ const clearForm = () => {
     // console.log(e.target)
     e.preventDefault()
 
-    console.log(name, profession, photoUrl, message)
+    console.log(name, profession, message, photoUrl)
     // clear the form 
+    axios.post("https://pinak-server.vercel.app/api/testimonial", {
+      name, profession, message, photoUrl
+    })
+    .then(res => {
+      console.log(res)
+      toast.success("Thank You For Your Support.")
+    })
+    .catch(err => {
+      console.log(err)
+      toast.error("Something is wrong. Please try again.")
+    })
     clearForm();
   }
   return (
@@ -95,152 +107,6 @@ const clearForm = () => {
               modules={[EffectCoverflow, Pagination, Autoplay]}
               className="mySwiper"
             >
-              {/* <SwiperSlide>
-                <figure className="snip1192">
-                  <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Rerum illum placeat ullam obcaecati perspiciatis sed
-                    doloremque minima doloribus ut porro. Laboriosam, et!
-                  </blockquote>
-                  <div className="author">
-                    <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg"
-                      alt="sq-sample1"
-                    />
-                    <h5>
-                      Lorem, ipsum dolor. <span>Lorem ipsum dolor sit.s</span>
-                    </h5>
-                  </div>
-                </figure>
-              </SwiperSlide> */}
-              {/* <SwiperSlide>
-                <figure className="snip1192">
-                  <blockquote>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Iusto quisquam harum deleniti repellendus soluta, modi
-                    officiis eos totam ipsum adipisci iure corporis incidunt?
-                    Iste fugit accusantium deleniti eos?
-                  </blockquote>
-                  <div className="author">
-                    <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample24.jpg"
-                      alt="sq-sample24"
-                    />
-                    <h5>
-                      Lorem, ipsum dolor.n<span>Lorem ipsum dolor sit.s</span>
-                    </h5>
-                  </div>
-                </figure>
-              </SwiperSlide> */}
-              {/* <SwiperSlide>
-                <figure className="snip1192">
-                  <blockquote>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Veniam, beatae? Exercitationem commodi explicabo sit
-                    necessitatibus. Quas pariatur nemo amet.
-                  </blockquote>
-                  <div className="author">
-                    <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample29.jpg"
-                      alt="sq-sample29"
-                    />
-                    <h5>
-                      Lorem, ipsum dolor.<span> Lorem ipsum dolor sit.</span>
-                    </h5>
-                  </div>
-                </figure>
-              </SwiperSlide> */}
-              {/* <SwiperSlide>
-                <figure className="snip1192">
-                  <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis dicta dolorem accusantium dignissimos.
-                    Molestias animi dolor laudantium placeat nobis cum porro
-                    voluptatum accusantium.
-                  </blockquote>
-                  <div className="author">
-                    <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg"
-                      alt="sq-sample1"
-                    />
-                    <h5>
-                      Lorem, ipsum dolor. <span>Lorem ipsum dolor sit.s</span>
-                    </h5>
-                  </div>
-                </figure>
-              </SwiperSlide> */}
-              {/* <SwiperSlide>
-                <figure className="snip1192">
-                  <blockquote>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Rerum distinctio magni iusto, pariatur quam accusantium,
-                    nulla rem obcaecati minus illum quis ea possimus!
-                  </blockquote>
-                  <div className="author">
-                    <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample24.jpg"
-                      alt="sq-sample24"
-                    />
-                    <h5>
-                      Lorem, ipsum dolor.n<span>Lorem ipsum dolor sit.s</span>
-                    </h5>
-                  </div>
-                </figure>
-              </SwiperSlide> */}
-              {/* <SwiperSlide>
-                <figure className="snip1192">
-                  <blockquote>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Iure quae distinctio ipsam molestias iusto vel, aspernatur
-                    officiis doloremque cum deserunt.
-                  </blockquote>
-                  <div className="author">
-                    <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample29.jpg"
-                      alt="sq-sample29"
-                    />
-                    <h5>
-                      Lorem, ipsum dolor.<span> Lorem ipsum dolor sit.</span>
-                    </h5>
-                  </div>
-                </figure>
-              </SwiperSlide> */}
-              {/* <SwiperSlide>
-                <figure className="snip1192">
-                  <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sint, voluptatum? Delectus ipsam corrupti quae consequatur
-                    quidem consectetur ullam?
-                  </blockquote>
-                  <div className="author">
-                    <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg"
-                      alt="sq-sample1"
-                    />
-                    <h5>
-                      Lorem, ipsum dolor. <span>Lorem ipsum dolor sit.s</span>
-                    </h5>
-                  </div>
-                </figure>
-              </SwiperSlide> */}
-              {/* <SwiperSlide>
-                <figure className="snip1192">
-                  <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eligendi enim maiores voluptatum vitae tempora vel fuga odit
-                    ipsa dignissimos provident.
-                  </blockquote>
-                  <div className="author">
-                    <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample24.jpg"
-                      alt="sq-sample24"
-                    />
-                    <h5>
-                      Lorem, ipsum dolor.n<span>Lorem ipsum dolor sit.s</span>
-                    </h5>
-                  </div>
-                </figure>
-              </SwiperSlide> */}
               {testimonialData.map(data => {
                 return (
                   <SwiperSlide key={data.id}>
