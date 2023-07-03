@@ -12,13 +12,25 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 import image from "../../assets/images/asset 25.jpeg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const TestimonialSection = () => {
   const [name, setName] = useState('')
   const [profession, setProfession] = useState('')
   const [photoUrl, setPhotoUrl] = useState('')
   const [message, setMessage] = useState('')
+  const [testimonialData, setTestimonialData] = useState([])
+
+  useEffect(() => {
+    try {
+      axios("http://localhost:5000/api/testimonial")
+      .then(res => setTestimonialData(res.data))
+      .catch(err => console.log(err))
+    } catch (error) {
+      console.log(error)
+    }
+  })
 
 const clearForm = () => {
   setName('');
@@ -83,7 +95,7 @@ const clearForm = () => {
               modules={[EffectCoverflow, Pagination, Autoplay]}
               className="mySwiper"
             >
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <figure className="snip1192">
                   <blockquote>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -100,8 +112,8 @@ const clearForm = () => {
                     </h5>
                   </div>
                 </figure>
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <figure className="snip1192">
                   <blockquote>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -119,8 +131,8 @@ const clearForm = () => {
                     </h5>
                   </div>
                 </figure>
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <figure className="snip1192">
                   <blockquote>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -137,8 +149,8 @@ const clearForm = () => {
                     </h5>
                   </div>
                 </figure>
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <figure className="snip1192">
                   <blockquote>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -156,8 +168,8 @@ const clearForm = () => {
                     </h5>
                   </div>
                 </figure>
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <figure className="snip1192">
                   <blockquote>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -174,8 +186,8 @@ const clearForm = () => {
                     </h5>
                   </div>
                 </figure>
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <figure className="snip1192">
                   <blockquote>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -192,8 +204,8 @@ const clearForm = () => {
                     </h5>
                   </div>
                 </figure>
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <figure className="snip1192">
                   <blockquote>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -210,8 +222,8 @@ const clearForm = () => {
                     </h5>
                   </div>
                 </figure>
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <figure className="snip1192">
                   <blockquote>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -228,26 +240,27 @@ const clearForm = () => {
                     </h5>
                   </div>
                 </figure>
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {testimonialData.map(data => {
+                return (
+                  <SwiperSlide key={data.id}>
                 <figure className="snip1192">
                   <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-                    perferendis expedita consequuntur dolorem? Laborum ex
-                    voluptates, sequi iusto est aliquid reprehenderit culpa
-                    provident laboriosam perspiciatis?
+                    {data.message}
                   </blockquote>
                   <div className="author">
                     <img
-                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample29.jpg"
+                      src={data.photoUrl}
                       alt="sq-sample29"
                     />
                     <h5>
-                      Lorem, ipsum dolor.<span> Lorem ipsum dolor sit.</span>
+                      {data.name}<span> {data.profession}</span>
                     </h5>
                   </div>
                 </figure>
               </SwiperSlide>
+                )
+              })}
             </Swiper>
           </div>
         </div>
