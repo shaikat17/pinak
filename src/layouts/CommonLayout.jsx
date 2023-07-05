@@ -5,16 +5,17 @@ import { useEffect, useState } from "react";
 import { HashLoader } from "react-spinners";
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { useGlobalContext } from "../context/AppAuthContext";
 
 const CommonLayout = () => {
-  const [loading, setLoading] = useState(true);
+  const {loading, setLoading} = useGlobalContext()
 
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 6000);
-  }, []);
+    }, 5000);
+  },[]);
 
   if (loading) {
     return (
