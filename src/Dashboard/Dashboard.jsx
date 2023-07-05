@@ -2,14 +2,17 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaUsers, FaEnvelope } from "react-icons/fa"
 import { AiFillDashboard } from "react-icons/ai"
+import WelcomeUser from "./components/WelcomeUser";
+import UserProfile from "./components/UserProfile";
+import GeneralInformation from "./components/GeneralInformation";
 
 
 const Dashboard = () => {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Dashboard", src: <AiFillDashboard size={26} /> },
-    { title: "Inbox", src: <FaEnvelope size={24} /> },
-    { title: "Users", src: <FaUsers size={25} />, gap: true },
+    { title: "Dashboard", src: <AiFillDashboard size={26} color="white" /> },
+    { title: "Inbox", src: <FaEnvelope size={24} color="white" /> },
+    { title: "Users", src: <FaUsers size={25} color="white" />, gap: true },
     { title: "Schedule ", src: "Schedule" },
     { title: "Search", src: "Search" },
     { title: "Analytics", src: "Chart" },
@@ -19,10 +22,12 @@ const Dashboard = () => {
 
   return (
     <div className="flex">
+      <div className={` ${
+          open ? "w-72" : "w-20 "}`}>
       <div
         className={` ${
           open ? "w-72" : "w-20 "
-        } bg-violet-900 h-screen p-5  pt-8 relative duration-300`}
+        } bg-violet-900 p-5 h-full pt-8 fixed duration-300`}
       >
         <img
           src="./src/assets/dashboard/control.png"
@@ -42,7 +47,7 @@ const Dashboard = () => {
               !open && "scale-0"
             }`}
           >
-            Pinak
+            Pinak Lab
           </h1>
         </div>
         <ul className="pt-6">
@@ -64,8 +69,17 @@ const Dashboard = () => {
           ))}
         </ul>
       </div>
-      <div className="h-screen flex-1 p-7">
-        <h1 className="text-2xl font-semibold ">Dashboard Page</h1>
+      </div>
+      <div className="h-screen flex-1 pl-7">
+        <WelcomeUser />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1">
+        <UserProfile />
+        </div>
+        <div className="grid grid-cols-1">
+            <GeneralInformation />
+        </div>
+      </div>
       </div>
     </div>
   );
