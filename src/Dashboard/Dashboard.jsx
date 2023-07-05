@@ -6,6 +6,10 @@ import WelcomeUser from "./components/WelcomeUser";
 import UserProfile from "./components/UserProfile";
 import GeneralInformation from "./components/GeneralInformation";
 
+// assets 
+import Pinak_logo from "../assets/dashboard/pinak_logo.png"
+import sideBar_controler from "../assets/dashboard/control.png"
+
 
 const Dashboard = () => {
   const [open, setOpen] = useState(true);
@@ -30,14 +34,14 @@ const Dashboard = () => {
         } bg-violet-900 p-5 h-full pt-8 fixed duration-300`}
       >
         <img
-          src="./src/assets/dashboard/control.png"
+          src={sideBar_controler}
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
            border-2 rounded-full  ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
         />
         <div className="flex gap-x-4 items-center">
           <img
-            src="./src/assets/dashboard/pinak_logo.png"
+            src={Pinak_logo}
             className={`cursor-pointer duration-500 w-20 ${
               open && "rotate-[360deg]"
             }`}
