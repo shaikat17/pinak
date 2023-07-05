@@ -10,6 +10,7 @@ import AboutUs from "../pages/AboutUs";
 import Hirings from "../components/Hirings";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Dashboard from "../Dashboard/Dashboard";
 
 
 export const router = createBrowserRouter([
@@ -60,5 +61,9 @@ export const router = createBrowserRouter([
     {
       path: "/register",
       element: <Register />
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />
     }
   ]);
