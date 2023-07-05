@@ -1,31 +1,58 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { ToastContainer } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { HashLoader } from "react-spinners";
+import { useGlobalContext } from "../context/AppAuthContext";
 
 const Login = () => {
+  const { loading, setLoading, signin } = useGlobalContext();
+
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const form = e.target
+    const form = e.target;
 
-    const email = form.email.value
-    const password = form.password.value
+    const email = form.email.value;
+    const password = form.password.value;
 
-    if(!email || !password) {
-      console.log("hello")
-      return toast.warning("Email and Password field can not be empty.")
+    if (!email || !password) {
+      console.log("hello");
+      return toast.warning("Email and Password field can not be empty.");
     }
+
+    signin(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        localStorage.setItem('userEmail', email)
+        console.log(loggedUser);
+        // navigate(from, { replace: true });
+        navigate("/")
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false)
+      });
+  };
+
+  if (loading) {
+    return (
+        <div className="flex items-center justify-center w-screen h-screen">
+            <HashLoader color="#36d7b7" />
+        </div>
+    );
   }
+
+
   return (
     <div className="lg:flex">
       <ToastContainer />
-        <Helmet>
-            <title>Pinak Idea Lab Private Ltd. || Login</title>
-        </Helmet>
+      <Helmet>
+        <title>Pinak Idea Lab Private Ltd. || Login</title>
+      </Helmet>
       <div className="lg:w-1/2 xl:max-w-screen-sm">
         <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
           <div className="cursor-pointer flex items-center">
@@ -48,8 +75,8 @@ const Login = () => {
                   Email Address
                 </div>
                 <input
-                  className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
-                  type=""
+                  className="w-full text-lg p-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                  type="email"
                   name="email"
                   placeholder="mike@gmail.com"
                 />
@@ -69,8 +96,8 @@ const Login = () => {
                   </div>
                 </div>
                 <input
-                  className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
-                  type=""
+                  className="w-full text-lg p-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                  type="password"
                   name="password"
                   placeholder="Enter your password"
                 />
@@ -87,7 +114,10 @@ const Login = () => {
             </form>
             <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
               Don't have an account ?
-              <Link to="/register" className="cursor-pointer text-indigo-600 hover:text-indigo-800">
+              <Link
+                to="/register"
+                className="cursor-pointer text-indigo-600 hover:text-indigo-800"
+              >
                 Sign up
               </Link>
             </div>

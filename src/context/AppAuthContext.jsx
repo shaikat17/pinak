@@ -16,6 +16,12 @@ const AppAuthContextProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, pass);
   };
 
+  // sing in with email and password
+  const signin = (email, pass) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, pass);
+  };
+
   // logout function
  const logOut = () => {
     return signOut(auth);
@@ -42,7 +48,8 @@ const AppAuthContextProvider = ({ children }) => {
             loading,
             setLoading,
             logOut,
-            user
+            user,
+            signin
         }}>
             {children}
         </AppAuthContext.Provider>
