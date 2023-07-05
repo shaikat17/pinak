@@ -40,7 +40,9 @@ const AppAuthContextProvider = ({ children }) => {
         <AppAuthContext.Provider value={{
             createUser,
             loading,
-            setLoading
+            setLoading,
+            logOut,
+            user
         }}>
             {children}
         </AppAuthContext.Provider>

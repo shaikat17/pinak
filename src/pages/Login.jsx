@@ -1,9 +1,28 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import { HashLoader } from "react-spinners";
 
 const Login = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const form = e.target
+
+    const email = form.email.value
+    const password = form.password.value
+
+    if(!email || !password) {
+      console.log("hello")
+      return toast.warning("Email and Password field can not be empty.")
+    }
+  }
   return (
     <div className="lg:flex">
+      <ToastContainer />
         <Helmet>
             <title>Pinak Idea Lab Private Ltd. || Login</title>
         </Helmet>
@@ -23,7 +42,7 @@ const Login = () => {
             Log in
           </h2>
           <div className="mt-12">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div>
                 <div className="text-sm font-bold text-gray-700 tracking-wide">
                   Email Address
@@ -31,6 +50,7 @@ const Login = () => {
                 <input
                   className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
                   type=""
+                  name="email"
                   placeholder="mike@gmail.com"
                 />
               </div>
@@ -51,12 +71,13 @@ const Login = () => {
                 <input
                   className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
                   type=""
+                  name="password"
                   placeholder="Enter your password"
                 />
               </div>
               <div className="mt-10">
                 <button
-                  className="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide
+                  className="bg-indigo-500 text-gray-100 p-4 w-full rounded-lg tracking-wide
                                 font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
                                 shadow-lg"
                 >

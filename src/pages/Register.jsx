@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../context/AppAuthContext";
-
+import { toast } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import { HashLoader } from "react-spinners";
 const Register = () => {
 
-  const {createUser } = useGlobalContext()
-  
+  const {createUser, logOut, loading } = useGlobalContext()
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -13,11 +17,37 @@ const Register = () => {
     const email = form.email.value
     const password = form.password.value
 
+    if(!email || !password) {
+      // console.log("hello")
+      return toast.warning("Email and Password field can not be empty.")
+    }
     console.log(email, password)
+
+    createUser(email, password)
+    .then(result => {
+      const loggedUser = result.user
+      console.log(loggedUser)
+      localStorage.setItem('userEmail', email)
+      // updateUserProfile(loggedUser, userName, photoUrl)
+      // .then(updateResult => console.log(updateResult))
+      // .catch(err => console.log(err))
+      logOut()
+      navigate("/login")
+    })
+    .catch(err => console.log(err))
+  }
+
+  if (loading) {
+    return (
+        <div className="flex items-center justify-center w-screen h-screen">
+            <HashLoader color="#36d7b7" />
+        </div>
+    );
   }
 
   return (
     <div className="flex justify-center flex-1">
+      <ToastContainer />
       <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
         <Link
           to="/"
