@@ -31,7 +31,7 @@ const Dashboard = () => {
       <div
         className={` ${
           open ? "w-72" : "w-20 "
-        } bg-violet-900 p-5 h-full pt-8 fixed duration-300`}
+        } bg-violet-900 p-5 h-full z-50 pt-8 fixed duration-300`}
       >
         <img
           src={sideBar_controler}
