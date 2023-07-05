@@ -1,29 +1,61 @@
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../../context/AppAuthContext";
 
 const Navbar = () => {
+  const { user, logOut } = useGlobalContext()
   const menu = (
     <>
-      <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900">
-        <Link to="/">Home</Link>
-      </li>
-      <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900">
-        <Link to="/about-us">About</Link>
-      </li>
-      <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900">
-        <Link to="/contact-us">Contacts</Link>
-      </li>
-      <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900">
-        <Link to="/team">Team</Link>
-      </li>
-      <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900">
-        <Link to="/blog">Blog</Link>
-      </li>
-      <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900">
-        <Link to="/gallery">Gallery</Link>
-      </li>
-      <li className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900">
-        <Link to="/hirings">Hirings</Link>
-      </li>
+      <Link
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"
+        to="/"
+      >
+        Home
+      </Link>
+      <Link
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"
+        to="/about-us"
+      >
+        About
+      </Link>
+      <Link
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"
+        to="/contact-us"
+      >
+        Contacts
+      </Link>
+      <Link
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"
+        to="/team"
+      >
+        Team
+      </Link>
+      <Link
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"
+        to="/blog"
+      >
+        Blog
+      </Link>
+      <Link
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"
+        to="/gallery"
+      >
+        Gallery
+      </Link>
+      <Link
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"
+        to="/hirings"
+      >
+        Hirings
+      </Link>
+      {user && <button onClick={() => {
+        logOut().then((res) => console.log("logout"));
+        localStorage.removeItem('userEmail')
+      }}
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900 text-left"
+        to="/hirings"
+      >
+        Logout
+      </button>}
     </>
   );
   return (
@@ -48,7 +80,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 space-y-5"
           >
             {menu}
           </ul>
@@ -61,12 +93,16 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 flex items-center justify-center space-x-5">
           {menu}
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        {user && <div className="avatar">
+          <div className="w-16 rounded-full border border-orange-500">
+            <img src="https://img.freepik.com/free-vector/man-with-mustache_1308-83591.jpg?size=626&ext=jpg&ga=GA1.1.1459026864.1687493706&semt=ais" />
+          </div>
+        </div>}
       </div>
     </div>
     // <div>
