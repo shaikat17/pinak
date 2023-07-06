@@ -69,7 +69,7 @@ const UserProfileEdit = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/user", userData)
+      .post("https://pinak-server.vercel.app/api/user", userData)
       .then((res) => {
         console.log(res)
         toast.success("Details Update Successfully.")
