@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaBriefcase, FaMapMarkerAlt } from "react-icons/fa";
 
 const UserProfile = () => {

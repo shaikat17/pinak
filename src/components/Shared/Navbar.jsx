@@ -100,7 +100,9 @@ const Navbar = () => {
       <div className="navbar-end">
         {user && <div className="avatar">
           <div className="w-16 rounded-full border cursor-pointer border-orange-500">
+            <Link to="/dashboard">
             <img src="https://img.freepik.com/free-vector/man-with-mustache_1308-83591.jpg?size=626&ext=jpg&ga=GA1.1.1459026864.1687493706&semt=ais" />
+            </Link>
           </div>
         </div>}
       </div>

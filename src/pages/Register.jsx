@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import { HashLoader } from "react-spinners";
+import axios from "axios";
 const Register = () => {
 
   const {createUser, logOut, loading } = useGlobalContext()
@@ -16,12 +17,14 @@ const Register = () => {
 
     const email = form.email.value
     const password = form.password.value
+    const name = form.name.value
 
-    if(!email || !password) {
+    console.log(name, email, password)
+
+    if(!email || !password || !name) {
       // console.log("hello")
       return toast.warning("Email and Password field can not be empty.")
     }
-    console.log(email, password)
 
     createUser(email, password)
     .then(result => {
@@ -31,6 +34,10 @@ const Register = () => {
       // updateUserProfile(loggedUser, userName, photoUrl)
       // .then(updateResult => console.log(updateResult))
       // .catch(err => console.log(err))
+      const userData = {name, email}
+      axios.post("http://localhost:5000/api/user", userData)
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
       logOut()
       navigate("/login")
     })
@@ -106,6 +113,12 @@ const Register = () => {
 
             <form onSubmit={handleSubmit}>
               <div className="mx-auto max-w-xs">
+              <input
+                  className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mb-5"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                />
                 <input
                   className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                   type="email"

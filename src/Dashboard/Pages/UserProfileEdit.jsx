@@ -2,41 +2,48 @@ import { useState } from "react";
 import WelcomeUser from "../components/WelcomeUser";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { useGlobalContext } from "../../context/AppAuthContext";
+import { HashLoader } from "react-spinners";
+import useUser from "../../hooks/useUser";
 
 const UserProfileEdit = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [photoUrl, setPhotoUrl] = useState("");
-  const [address, setAddress] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
-  const [joinDate, setJoinDate] = useState("");
-  const [role, setRole] = useState("");
-  const [birthDate, setBirthDate] = useState("");
-  const [selfDetails, setSelfDetails] = useState("");
-  const [linkedIn, setLinkedIn] = useState("");
-  const [github, setGithub] = useState("");
-  const [twitter, setTwitter] = useState("");
-  const [instra, setInstra] = useState("");
-  const [facebook, setFacebook] = useState("");
+  const { user, loading } = useGlobalContext()
+
+  // react query
+  const [singleUser] = useUser()
+
+  const [name, setName] = useState(singleUser?.name);
+  const [photoUrl, setPhotoUrl] = useState(singleUser?.photoUrl);
+  const [address, setAddress] = useState(singleUser?.address);
+  const [phoneNo, setPhoneNo] = useState(singleUser?.phone_no);
+  const [joinDate, setJoinDate] = useState(singleUser?.join_date);
+  const [role, setRole] = useState(singleUser?.role);
+  const [birthDate, setBirthDate] = useState(singleUser?.birth_date);
+  const [selfDetails, setSelfDetails] = useState(singleUser?.about);
+  const [linkedIn, setLinkedIn] = useState(singleUser?.linkedin);
+  const [github, setGithub] = useState(singleUser?.github);
+  const [twitter, setTwitter] = useState(singleUser?.twitter);
+  const [instra, setInstra] = useState(singleUser?.instra);
+  const [facebook, setFacebook] = useState(singleUser?.facebook);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // console.log(name,
-    //   email,
-    //   phoneNo,
-    //   address,
-    //   joinDate,
-    //   role,
-    //   birthDate,
-    //   selfDetails,
-    //   photoUrl,
-    //   facebook,
-    //   linkedIn,
-    //   twitter,
-    //   github,
-    //   instra,)
-
+    const email = e.target.email.value
+    console.log(name,
+      email,
+      phoneNo,
+      address,
+      joinDate,
+      role,
+      birthDate,
+      selfDetails,
+      photoUrl,
+      facebook,
+      linkedIn,
+      twitter,
+      github,
+      instra,)
     if (
       !name ||
       !email ||
@@ -62,14 +69,18 @@ const UserProfileEdit = () => {
       about: selfDetails,
       photoUrl,
       facebook,
-      linkedIn,
+      linkedin: linkedIn,
       twitter,
       github,
       instra,
     };
 
     axios
-      .post("https://pinak-server.vercel.app/api/user", userData)
+      .patch("http://localhost:5000/api/user", userData, {
+        params: {
+          email: email
+        }
+      })
       .then((res) => {
         console.log(res)
         toast.success("Details Update Successfully.")
@@ -79,6 +90,14 @@ const UserProfileEdit = () => {
         toast.error("Opps! Something Went Wrong. Please Try Again.")
       });
   };
+
+  if (loading) {
+    return (
+        <div className="flex items-center justify-center w-screen h-screen">
+            <HashLoader color="#36d7b7" />
+        </div>
+    );
+  }
 
   return (
     <div className="h-screen flex-1 pl-7 ">
@@ -95,7 +114,7 @@ const UserProfileEdit = () => {
             type="text"
             placeholder="Enter Your Name"
             name="name"
-            defaultValue={name}
+            defaultValue={singleUser?.name}
             onChange={(e) => setName(e.target.value)}
             className="input input-bordered w-full max-w-xs border-violet-900"
           />
@@ -107,10 +126,9 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="email"
-            defaultValue={email}
+            defaultValue={user?.email}
             placeholder="Enter Your email"
-            onChange={(e) => setEmail(e.target.value)}
-            className="input input-bordered w-full max-w-xs border-violet-900"
+            className="input input-bordered w-full max-w-xs border-violet-900" readOnly
           />
         </div>
         <div className="form-control w-full max-w-xs">
@@ -120,7 +138,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="photoUrl"
-            defaultValue={photoUrl}
+            defaultValue={singleUser?.photoUrl}
             placeholder="Enter Your Photo url"
             onChange={(e) => setPhotoUrl(e.target.value)}
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -133,7 +151,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="address"
-            defaultValue={address}
+            defaultValue={singleUser?.address}
             onChange={(e) => setAddress(e.target.value)}
             placeholder="Enter Your Address"
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -146,7 +164,8 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="phoneNo"
-            defaultValue={phoneNo}
+            defaultValue={singleUser?.
+              phone_no}
             placeholder="Enter Your Phone No"
             onChange={(e) => setPhoneNo(e.target.value)}
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -159,7 +178,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="joinDate"
-            defaultValue={joinDate}
+            defaultValue={singleUser?.join_date}
             placeholder="Enter Your Join Date"
             onChange={(e) => setJoinDate(e.target.value)}
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -172,7 +191,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="role"
-            defaultValue={role}
+            defaultValue={singleUser?.role}
             placeholder="Enter Your Role"
             onChange={(e) => setRole(e.target.value)}
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -185,7 +204,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="birthDate"
-            defaultValue={birthDate}
+            defaultValue={singleUser?.birth_date}
             placeholder="Enter Your Birth Date"
             onChange={(e) => setBirthDate(e.target.value)}
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -198,7 +217,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="selfDetails"
-            defaultValue={selfDetails}
+            defaultValue={singleUser?.about}
             placeholder="Write About Yourself"
             onChange={(e) => setSelfDetails(e.target.value)}
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -211,7 +230,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="linkedin"
-            defaultValue={linkedIn}
+            defaultValue={singleUser?.linkedin}
             onChange={(e) => setLinkedIn(e.target.value)}
             placeholder="Enter Your Linked In Profile URL"
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -224,7 +243,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="twitter"
-            defaultValue={twitter}
+            defaultValue={singleUser?.twitter}
             onChange={(e) => setTwitter(e.target.value)}
             placeholder="Enter Your Twitter Profile URL"
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -237,7 +256,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="facebook"
-            defaultValue={facebook}
+            defaultValue={singleUser?.facebook}
             onChange={(e) => setFacebook(e.target.value)}
             placeholder="Enter Your Facebook Profile URL"
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -250,7 +269,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="github"
-            defaultValue={github}
+            defaultValue={singleUser?.github}
             onChange={(e) => setGithub(e.target.value)}
             placeholder="Enter Your Github Profile URL"
             className="input input-bordered w-full max-w-xs border-violet-900"
@@ -263,7 +282,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="instra"
-            defaultValue={instra}
+            defaultValue={singleUser?.instra}
             placeholder="Enter Your Instra Profile URL"
             onChange={(e) => setInstra(e.target.value)}
             className="input input-bordered w-full max-w-xs border-violet-900"
