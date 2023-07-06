@@ -11,59 +11,68 @@ import Hirings from "../components/Hirings";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../Dashboard/Dashboard";
-
+import UserProfileEdit from "../Dashboard/Pages/UserProfileEdit";
+import Profile from "../Dashboard/Pages/Profile";
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <CommonLayout />,
-      children: [
-        {
-          path: "/",
-          element: <Home />
-        },
-        {
-          path: "/gallery",
-          element: <Gallery />
-        },
-        {
-          path: "/blog",
-          element: <Blog />
-        },
-        {
-          path: "/contact-us",
-          element: <ContactUs />
-        },
-        {
-          path: '/team',
-          element: <Team/>
-        },
-        {
-          
-          path: "/about-us",
-          element: <AboutUs />
-        },
-        {
-          
-          path: "/hirings",
-          element: <Hirings />
-        }
-      ]
-    },
-    {
-      path: "*",
-      element: <ErrorPage />
-    },
-    {
-      path: "/login",
-      element: <Login />
-    },
-    {
-      path: "/register",
-      element: <Register />
-    },
-    {
-      path: "/dashboard",
-      element: <Dashboard />
-    }
-  ]);
+  {
+    path: "/",
+    element: <CommonLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
+      {
+        path: "/team",
+        element: <Team />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "/hirings",
+        element: <Hirings />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Profile />,
+      },
+      {
+        path: "edit-information",
+        element: <UserProfileEdit />,
+      },
+    ],
+  },
+]);

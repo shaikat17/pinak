@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { FaUsers, FaEnvelope } from "react-icons/fa"
 import { AiFillDashboard } from "react-icons/ai"
-import WelcomeUser from "./components/WelcomeUser";
-import UserProfile from "./components/UserProfile";
-import GeneralInformation from "./components/GeneralInformation";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // assets 
 import Pinak_logo from "../assets/dashboard/pinak_logo.png"
@@ -74,17 +73,8 @@ const Dashboard = () => {
         </ul>
       </div>
       </div>
-      <div className="h-screen flex-1 pl-7">
-        <WelcomeUser />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        <div className="grid grid-cols-1">
-        <UserProfile />
-        </div>
-        <div className="grid grid-cols-1">
-            <GeneralInformation />
-        </div>
-      </div>
-      </div>
+      <ToastContainer />
+      <Outlet />
     </div>
   );
 };

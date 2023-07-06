@@ -3,7 +3,7 @@ import { FaBriefcase, FaMapMarkerAlt } from "react-icons/fa";
 
 const UserProfile = () => {
   return (
-    <div className="flex flex-col p-5 justify-center border shadow-lg">
+    <div className="flex flex-col p-5 border shadow-lg">
       <div className="avatar">
         <div className="w-24 rounded">
           <img src="https://img.freepik.com/free-vector/man-with-mustache_1308-83591.jpg?size=626&ext=jpg&ga=GA1.1.1459026864.1687493706&semt=ais" />
