@@ -7,9 +7,12 @@ const AllUser = () => {
 
   useEffect(() => {
     axios("http://localhost:5000/api/user")
-      .then((res) => setAllUser(res.data))
+      .then((res) => {
+        console.log(res.data)
+        setAllUser(res.data)
+      })
       .catch((err) => console.log(err));
-  });
+  },[]);
   return (
     <div className="h-screen flex-1 pl-7 overflow-hidden">
       <WelcomeUser />
@@ -45,7 +48,7 @@ const AllUser = () => {
                     <td>{user?.name}</td>
                     <td>{user?.email}</td>
                     <td>{user?.role}</td>
-                    <td>{user?.status}</td>
+                    <td className={`${user?.status === "Pending" ? "text-red-500" : "text-green-500"}`}>{user?.status}</td>
                     <td className="flex gap-2">
                       <button className="bg-green-400 rounded p-1 text-white">Active</button>
                       <button className="bg-red-400 rounded p-1 text-white">Deactive</button>
