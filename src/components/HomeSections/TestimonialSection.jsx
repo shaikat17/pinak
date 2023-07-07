@@ -109,7 +109,7 @@ const clearForm = () => {
             >
               {testimonialData.map(data => {
                 return (
-                  <SwiperSlide key={data.id}>
+                  <SwiperSlide key={data._id}>
                 <figure className="snip1192">
                   <blockquote>
                     {data.message}
