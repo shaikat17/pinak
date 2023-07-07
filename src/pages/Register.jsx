@@ -19,7 +19,7 @@ const Register = () => {
     const password = form.password.value
     const name = form.name.value
 
-    console.log(name, email, password)
+    // console.log(name, email, password)
 
     if(!email || !password || !name) {
       // console.log("hello")
@@ -29,14 +29,17 @@ const Register = () => {
     createUser(email, password)
     .then(result => {
       const loggedUser = result.user
-      console.log(loggedUser)
+      // console.log(loggedUser)
       localStorage.setItem('userEmail', email)
       // updateUserProfile(loggedUser, userName, photoUrl)
       // .then(updateResult => console.log(updateResult))
       // .catch(err => console.log(err))
       const userData = {name, email}
       axios.post("http://localhost:5000/api/user", userData)
-      .then(res => console.log(res))
+      .then(res => {
+        // console.log(res)
+        console.log("Logged In Successfully.")
+      })
       .catch(err => console.log(err))
       logOut()
       navigate("/login")

@@ -23,7 +23,7 @@ const Login = () => {
     const password = form.password.value;
 
     if (!email || !password) {
-      console.log("hello");
+      // console.log("hello");
       return toast.warning("Email and Password field can not be empty.");
     }
 
@@ -31,7 +31,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         localStorage.setItem('userEmail', email)
-        console.log(loggedUser);
+        // console.log(loggedUser);
         navigate(from, { replace: true });
         // navigate("/")
       })

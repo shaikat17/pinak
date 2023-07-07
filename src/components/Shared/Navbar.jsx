@@ -49,6 +49,12 @@ const Navbar = () => {
       >
         Hirings
       </Link>
+      {!user && <Link
+        className="text-gray-500 hover:text-orange-500 hover:transition-all hover:duration-900 transition duration-900"
+        to="/login"
+      >
+        Login
+      </Link>}
       {user && <button onClick={() => {
         logOut().then((res) => console.log("logout"));
         localStorage.removeItem('userEmail')

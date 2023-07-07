@@ -75,7 +75,7 @@ const UserProfileEdit = () => {
     //   github,
     //   instra,)
 
-    
+
     if (
       !name ||
       !email ||
@@ -114,7 +114,7 @@ const UserProfileEdit = () => {
         }
       })
       .then((res) => {
-        console.log(res)
+        // console.log(res)
         toast.success("Details Update Successfully.")
       })
       .catch((err) => {

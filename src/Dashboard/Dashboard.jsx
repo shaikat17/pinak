@@ -9,10 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 import Pinak_logo from "../assets/dashboard/pinak_logo.png";
 import sideBar_controler from "../assets/dashboard/control.png";
 import { useGlobalContext } from "../context/AppAuthContext";
-import WelcomeUser from "./components/WelcomeUser";
 
 const Dashboard = () => {
-  const { logOut } = useGlobalContext()
+  const { logOut, loading } = useGlobalContext()
   const [open, setOpen] = useState(true);
   const Menus = [
     { title: "Dashboard", link: "/dashboard", src: <AiFillDashboard size={26} color="white" /> },
@@ -26,7 +25,6 @@ const Dashboard = () => {
     { title: "Files ", src: "Folder", gap: true },
     { title: "Setting", src: <AiFillSetting size={24} color="white" /> },
   ];
-
 
   return (
     <div className="flex">

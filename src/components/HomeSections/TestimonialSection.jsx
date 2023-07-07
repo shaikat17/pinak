@@ -44,13 +44,13 @@ const clearForm = () => {
     // console.log(e.target)
     e.preventDefault()
 
-    console.log(name, profession, message, photoUrl)
+    // console.log(name, profession, message, photoUrl)
     // clear the form 
     axios.post("https://pinak-server.vercel.app/api/testimonial", {
       name, profession, message, photoUrl
     })
     .then(res => {
-      console.log(res)
+      // console.log(res)
       toast.success("Thank You For Your Support.")
     })
     .catch(err => {
