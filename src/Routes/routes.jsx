@@ -13,6 +13,8 @@ import Register from "../pages/Register";
 import Dashboard from "../Dashboard/Dashboard";
 import UserProfileEdit from "../Dashboard/Pages/UserProfileEdit";
 import Profile from "../Dashboard/Pages/Profile";
+import PrivateRoute from "../ProtectedRoute/PrivateRoute";
+import AllUser from "../Dashboard/Pages/AllUser";
 
 export const router = createBrowserRouter([
   {
@@ -63,7 +65,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: <PrivateRoute><Dashboard /></PrivateRoute>,
     children: [
       {
         path: "/dashboard",
@@ -72,6 +74,10 @@ export const router = createBrowserRouter([
       {
         path: "edit-information",
         element: <UserProfileEdit />,
+      },
+      {
+        path: "alluser",
+        element: <AllUser />,
       },
     ],
   },

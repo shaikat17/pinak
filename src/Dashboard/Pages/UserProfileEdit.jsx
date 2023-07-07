@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WelcomeUser from "../components/WelcomeUser";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -12,19 +12,35 @@ const UserProfileEdit = () => {
   // react query
   const [singleUser] = useUser()
 
-  const [name, setName] = useState(singleUser?.name);
-  const [photoUrl, setPhotoUrl] = useState(singleUser?.photoUrl);
-  const [address, setAddress] = useState(singleUser?.address);
-  const [phoneNo, setPhoneNo] = useState(singleUser?.phone_no);
-  const [joinDate, setJoinDate] = useState(singleUser?.join_date);
-  const [role, setRole] = useState(singleUser?.role);
-  const [birthDate, setBirthDate] = useState(singleUser?.birth_date);
-  const [selfDetails, setSelfDetails] = useState(singleUser?.about);
-  const [linkedIn, setLinkedIn] = useState(singleUser?.linkedin);
-  const [github, setGithub] = useState(singleUser?.github);
-  const [twitter, setTwitter] = useState(singleUser?.twitter);
-  const [instra, setInstra] = useState(singleUser?.instra);
-  const [facebook, setFacebook] = useState(singleUser?.facebook);
+  const [name, setName] = useState("");
+  const [photoUrl, setPhotoUrl] = useState("");
+  const [address, setAddress] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
+  const [joinDate, setJoinDate] = useState("");
+  const [role, setRole] = useState("");
+  const [birthDate, setBirthDate] = useState("");
+  const [selfDetails, setSelfDetails] = useState("");
+  const [linkedIn, setLinkedIn] = useState("");
+  const [github, setGithub] = useState("");
+  const [twitter, setTwitter] = useState("");
+  const [instra, setInstra] = useState("");
+  const [facebook, setFacebook] = useState("");
+
+  useEffect(() => {
+    setName(singleUser?.name)
+    setPhotoUrl(singleUser?.photoUrl)
+    setAddress(singleUser?.address)
+    setPhoneNo(singleUser?.phone_no)
+    setJoinDate(singleUser?.join_date)
+    setRole(singleUser?.role)
+    setBirthDate(singleUser?.birth_date)
+    setSelfDetails(singleUser?.about)
+    setLinkedIn(singleUser?.linkedin)
+    setGithub(singleUser?.github)
+    setTwitter(singleUser?.twitter)
+    setFacebook(singleUser?.facebook)
+    setInstra(singleUser?.instra)
+  },[singleUser])
 
   const handleSubmit = (e) => {
     e.preventDefault();

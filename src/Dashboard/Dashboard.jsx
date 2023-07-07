@@ -1,27 +1,31 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { FaUsers, FaEnvelope, FaHome } from "react-icons/fa";
-import { AiFillDashboard } from "react-icons/ai";
+import { FaUsers, FaEnvelope, FaHome, FaSignOutAlt,  } from "react-icons/fa";
+import { AiFillDashboard, AiFillSetting } from "react-icons/ai";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // assets
 import Pinak_logo from "../assets/dashboard/pinak_logo.png";
 import sideBar_controler from "../assets/dashboard/control.png";
+import { useGlobalContext } from "../context/AppAuthContext";
+import WelcomeUser from "./components/WelcomeUser";
 
 const Dashboard = () => {
+  const { logOut } = useGlobalContext()
   const [open, setOpen] = useState(true);
   const Menus = [
     { title: "Dashboard", link: "/dashboard", src: <AiFillDashboard size={26} color="white" /> },
     { title: "Home", link: "/", src: <FaHome size={26} color="white" /> },
     { title: "Inbox", src: <FaEnvelope size={24} color="white" /> },
-    { title: "Users", src: <FaUsers size={25} color="white" />, gap: true },
+    { title: "Users", link: "/dashboard/alluser", src: <FaUsers size={25} color="white" />, gap: true },
     { title: "Schedule ", src: "Schedule" },
     { title: "Search", src: "Search" },
     { title: "Analytics", src: "Chart" },
     { title: "Files ", src: "Folder", gap: true },
-    { title: "Setting", src: "Setting" },
+    { title: "Setting", src: <AiFillSetting size={24} color="white" /> },
   ];
+
 
   return (
     <div className="flex">
@@ -73,6 +77,10 @@ const Dashboard = () => {
                 </Link>
               </li>
             ))}
+            <button className="flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4" onClick={() => {
+              logOut().then((res) => console.log("logout"));
+              localStorage.removeItem('userEmail')
+            }}><FaSignOutAlt size={26} color="white" /> <span className={`${!open && "hidden"} origin-left duration-200`}>Signout</span></button>
           </ul>
         </div>
       </div>

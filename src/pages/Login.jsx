@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,6 +10,9 @@ const Login = () => {
   const { loading, setLoading, signin } = useGlobalContext();
 
   const navigate = useNavigate()
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,8 +32,8 @@ const Login = () => {
         const loggedUser = result.user;
         localStorage.setItem('userEmail', email)
         console.log(loggedUser);
-        // navigate(from, { replace: true });
-        navigate("/")
+        navigate(from, { replace: true });
+        // navigate("/")
       })
       .catch((err) => {
         console.log(err);
@@ -38,13 +41,13 @@ const Login = () => {
       });
   };
 
-  if (loading) {
-    return (
-        <div className="flex items-center justify-center w-screen h-screen">
-            <HashLoader color="#36d7b7" />
-        </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //       <div className="flex items-center justify-center w-screen h-screen">
+  //           <HashLoader color="#36d7b7" />
+  //       </div>
+  //   );
+  // }
 
 
   return (
