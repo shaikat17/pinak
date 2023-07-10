@@ -49,7 +49,7 @@ const AllUser = () => {
   //   }
 
   return (
-    <div className="h-screen flex-1 pl-7 overflow-hidden">
+    <div className="h-screen flex-1 pl-7 overflow-x-hidden">
       <WelcomeUser />
       {loading && (
         <div className="h-full w-full flex items-center justify-center">
