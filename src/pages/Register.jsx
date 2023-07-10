@@ -35,7 +35,7 @@ const Register = () => {
       // .then(updateResult => console.log(updateResult))
       // .catch(err => console.log(err))
       const userData = {name, email}
-      axios.post("http://localhost:5000/api/user", userData)
+      axios.post("https://pinak-server.vercel.app/api/user", userData)
       .then(res => {
         // console.log(res)
         console.log("Logged In Successfully.")

@@ -73,7 +73,7 @@ const UserProfileEdit = () => {
           };
 
           axios
-            .patch("http://localhost:5000/api/user", userData, {
+            .patch("https://pinak-server.vercel.app/api/user", userData, {
               params: {
                 email: email,
               },
@@ -107,7 +107,7 @@ const UserProfileEdit = () => {
       };
   
       axios
-        .patch("http://localhost:5000/api/user", userData, {
+        .patch("https://pinak-server.vercel.app/api/user", userData, {
           params: {
             email: email,
           },
