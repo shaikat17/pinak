@@ -30,7 +30,6 @@ const UserProfileEdit = () => {
     const github = e.target.github.value;
     const instra = e.target.instra.value;
 
-
     if (
       !name ||
       !email ||
@@ -44,7 +43,86 @@ const UserProfileEdit = () => {
       return toast.warning("Please Enter All Required Information.");
     }
 
-    if(selectedImage)
+    if (selectedImage) {
+      const formData = new FormData();
+      formData.append("image", selectedImage);
+
+      axios
+        .post(
+          `https://api.imgbb.com/1/upload?key=${
+            import.meta.env.VITE_imgbb_key
+          }`,
+          formData
+        )
+        .then((res) => {
+          const userData = {
+            name,
+            email,
+            phone_no: phoneNo,
+            address,
+            join_date: joinDate,
+            role,
+            birth_date: birthDate,
+            about: selfDetails,
+            photoUrl: res.data.data.display_url,
+            facebook,
+            linkedin: linkedIn,
+            twitter,
+            github,
+            instra,
+          };
+
+          axios
+            .patch("http://localhost:5000/api/user", userData, {
+              params: {
+                email: email,
+              },
+            })
+            .then((res) => {
+              // console.log(res)
+              refetch();
+              toast.success("Details Update Successfully.");
+            })
+            .catch((err) => {
+              console.log(err);
+              toast.error("Opps! Something Went Wrong. Please Try Again.");
+            });
+        })
+        .catch((err) => console.log(err));
+    } else {
+      const userData = {
+        name,
+        email,
+        phone_no: phoneNo,
+        address,
+        join_date: joinDate,
+        role,
+        birth_date: birthDate,
+        about: selfDetails,
+        facebook,
+        linkedin: linkedIn,
+        twitter,
+        github,
+        instra,
+      };
+  
+      axios
+        .patch("http://localhost:5000/api/user", userData, {
+          params: {
+            email: email,
+          },
+        })
+        .then((res) => {
+          // console.log(res)
+          refetch();
+          toast.success("Details Update Successfully.");
+        })
+        .catch((err) => {
+          console.log(err);
+          toast.error("Opps! Something Went Wrong. Please Try Again.");
+        });
+    }
+  } 
 
   if (loading || userLoading) {
     return (
@@ -88,7 +166,7 @@ const UserProfileEdit = () => {
         </div>
         <div className="form-control w-full max-w-xs">
           <label className="label">
-            <span className="label-text">What is your Photo URL?</span>
+            <span className="label-text">Select Your Profile</span>
           </label>
           <input
             type="file"
