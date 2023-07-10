@@ -36,6 +36,7 @@ const Login = () => {
         // navigate("/")
       })
       .catch((err) => {
+        toast.error("Please use valid email and password.")
         console.log(err);
         setLoading(false)
       });
