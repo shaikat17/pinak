@@ -14,7 +14,8 @@ import UserProfileEdit from "../Dashboard/Pages/UserProfileEdit";
 import Profile from "../Dashboard/Pages/Profile";
 import PrivateRoute from "../ProtectedRoute/PrivateRoute";
 import AllUser from "../Dashboard/Pages/AllUser";
-import Gallery from "../Dashboard/Pages/Gallery";
+import DashboardGallery from "../Dashboard/Pages/DashboardGallery";
+import Gallery from "../pages/Gallery";
 
 export const router = createBrowserRouter([
   {
@@ -81,7 +82,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "gallery",
-        element: <Gallery />,
+        element: <DashboardGallery />,
       },
     ],
   },

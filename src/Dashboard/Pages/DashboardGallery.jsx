@@ -5,7 +5,7 @@ import axios from "axios";
 import { FaTrash } from "react-icons/fa";
 import useGalleryImage from "../../hooks/useGalleryImage";
 
-const Gallery = () => {
+const DashboardGallery = () => {
     const [selectedImage, setSelectedImage] = useState(null)
 
     // getting all images
@@ -72,7 +72,7 @@ const Gallery = () => {
   return (
     <div className="h-screen flex-1 pl-7 ">
       <WelcomeUser />
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row justify-between">
         <h1 className="font-black text-3xl my-4">Gallery</h1>
         <form onSubmit={handleSubmit}>
         <div className="form-control w-full max-w-xs">
@@ -128,4 +128,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default DashboardGallery;
