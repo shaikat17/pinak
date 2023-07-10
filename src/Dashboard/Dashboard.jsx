@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { FaUsers, FaEnvelope, FaHome, FaSignOutAlt, FaUserEdit,  } from "react-icons/fa";
+import { FaUsers, FaEnvelope, FaHome, FaSignOutAlt, FaUserEdit, FaImages,  } from "react-icons/fa";
 import { AiFillDashboard, AiFillSetting } from "react-icons/ai";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +19,7 @@ const Dashboard = () => {
     { title: "Edit Profile", link: "/dashboard/edit-information", src: <FaUserEdit size={26} color="white" /> },
     { title: "Inbox", src: <FaEnvelope size={24} color="white" /> },
     { title: "Users", link: "/dashboard/alluser", src: <FaUsers size={25} color="white" />, gap: true },
-    { title: "Schedule ", src: "Schedule" },
+    { title: "Gallery ", link: "/dashboard/gallery" , src: <FaImages size={24} color="white" /> },
     { title: "Search", src: "Search" },
     { title: "Analytics", src: "Chart" },
     { title: "Files ", src: "Folder", gap: true },

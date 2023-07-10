@@ -135,6 +135,7 @@ const UserProfileEdit = () => {
   return (
     <div className="h-screen flex-1 pl-7 ">
       <WelcomeUser />
+      <h1 className="font-black text-3xl my-4">Update User Information</h1>
       <form
         className="grid grid-cols-1 md:grid-cols-2 border p-2 gap-2"
         onSubmit={handleSubmit}

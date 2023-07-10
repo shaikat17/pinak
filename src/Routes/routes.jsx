@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import CommonLayout from "../layouts/CommonLayout";
 import Home from "../pages/Home";
-import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
 import ContactUs from "../pages/ContactUs";
 import ErrorPage from "../pages/ErrorPage";
@@ -15,6 +14,7 @@ import UserProfileEdit from "../Dashboard/Pages/UserProfileEdit";
 import Profile from "../Dashboard/Pages/Profile";
 import PrivateRoute from "../ProtectedRoute/PrivateRoute";
 import AllUser from "../Dashboard/Pages/AllUser";
+import Gallery from "../Dashboard/Pages/Gallery";
 
 export const router = createBrowserRouter([
   {
@@ -78,6 +78,10 @@ export const router = createBrowserRouter([
       {
         path: "alluser",
         element: <AllUser />,
+      },
+      {
+        path: "gallery",
+        element: <Gallery />,
       },
     ],
   },

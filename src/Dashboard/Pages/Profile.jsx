@@ -13,6 +13,7 @@ const Profile = () => {
         {userLoading && <div className="h-full w-full flex items-center justify-center">
         <HashLoader color="#36d7b7" />
       </div> }
+      <h1 className="font-black text-3xl my-4">User Information</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         <div className="grid grid-cols-1">
         <UserProfile />
