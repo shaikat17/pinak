@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WelcomeUser from "../components/WelcomeUser";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { FaTrash } from "react-icons/fa";
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null)
+    const [allImages, setAllImages] = useState([])
+
+    // getting all images
+    useEffect(() => {
+        axios.get("http://localhost:5000/api/gallery")
+        .then(res => setAllImages(res.data))
+        .catch(err => console.log(err))
+    },[])
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        console.log(selectedImage.name.split(".")[0])
 
         if(selectedImage) {
             const formData = new FormData();
@@ -25,6 +36,7 @@ const Gallery = () => {
                 const userData = {
                   ImageURL: res.data.data.display_url,
                   ImageID: res.data.data.id,
+                  ImageName: selectedImage.name.split(".")[0]
                 };
       
                 axios
@@ -63,6 +75,43 @@ const Gallery = () => {
         <button className="bg-violet-900 text-white p-2 font-bold m-2">Upload</button>
         </form>
       </div>
+      <h5 className="bg-violet-900 text-white py-2 px-1 rounded font-bold text-2xl mb-4">All Images</h5>
+      {/* All Image Table */}
+      <div className="overflow-x-auto">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {allImages.map(image => {
+        return (
+            <tr key={image._id}>
+        <td>
+          <div className="flex items-center space-x-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={image.ImageURL} alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+         {image.ImageName}
+        </td>
+        <td><button className="flex items-center bg-red-500 p-1 rounded text-white font-semibold gap-2"><FaTrash />Delete</button></td>
+      </tr>
+        )
+      })}
+      
+    </tbody>
+    
+  </table>
+</div>
     </div>
   );
 };
