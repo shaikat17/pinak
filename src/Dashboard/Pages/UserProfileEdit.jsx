@@ -7,73 +7,28 @@ import { HashLoader } from "react-spinners";
 import useUser from "../../hooks/useUser";
 
 const UserProfileEdit = () => {
-  const { user, loading } = useGlobalContext()
+  const { user, loading } = useGlobalContext();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // react query
-  const [singleUser] = useUser()
-
-  // const [name, setName] = useState("");
-  // const [photoUrl, setPhotoUrl] = useState("");
-  // const [address, setAddress] = useState("");
-  // const [phoneNo, setPhoneNo] = useState("");
-  // const [joinDate, setJoinDate] = useState("");
-  // const [role, setRole] = useState("");
-  // const [birthDate, setBirthDate] = useState("");
-  // const [selfDetails, setSelfDetails] = useState("");
-  // const [linkedIn, setLinkedIn] = useState("");
-  // const [github, setGithub] = useState("");
-  // const [twitter, setTwitter] = useState("");
-  // const [instra, setInstra] = useState("");
-  // const [facebook, setFacebook] = useState("");
-
-  // useEffect(() => {
-  //   setName(singleUser?.name)
-  //   setPhotoUrl(singleUser?.photoUrl)
-  //   setAddress(singleUser?.address)
-  //   setPhoneNo(singleUser?.phone_no)
-  //   setJoinDate(singleUser?.join_date)
-  //   setRole(singleUser?.role)
-  //   setBirthDate(singleUser?.birth_date)
-  //   setSelfDetails(singleUser?.about)
-  //   setLinkedIn(singleUser?.linkedin)
-  //   setGithub(singleUser?.github)
-  //   setTwitter(singleUser?.twitter)
-  //   setFacebook(singleUser?.facebook)
-  //   setInstra(singleUser?.instra)
-  // },[singleUser])
+  const [singleUser, userLoading, refetch] = useUser();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const name = e.target.name.value
-    const email = e.target.email.value
-    const phoneNo = e.target.phoneNo.value
-    const address = e.target.address.value
-    const joinDate = e.target.joinDate.value
-    const role = e.target.role.value
-    const birthDate = e.target.birthDate.value
-    const selfDetails = e.target.selfDetails.value
-    const photoUrl = e.target.photoUrl.value
-    const facebook = e.target.facebook.value
-    const linkedIn = e.target.linkedin.value
-    const twitter = e.target.twitter.value
-    const github = e.target.github.value
-    const instra = e.target.instra.value
-
-    // console.log(name,
-    //   email,
-    //   phoneNo,
-    //   address,
-    //   joinDate,
-    //   role,
-    //   birthDate,
-    //   selfDetails,
-    //   photoUrl,
-    //   facebook,
-    //   linkedIn,
-    //   twitter,
-    //   github,
-    //   instra,)
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const phoneNo = e.target.phoneNo.value;
+    const address = e.target.address.value;
+    const joinDate = e.target.joinDate.value;
+    const role = e.target.role.value;
+    const birthDate = e.target.birthDate.value;
+    const selfDetails = e.target.selfDetails.value;
+    const facebook = e.target.facebook.value;
+    const linkedIn = e.target.linkedin.value;
+    const twitter = e.target.twitter.value;
+    const github = e.target.github.value;
+    const instra = e.target.instra.value;
 
 
     if (
@@ -84,50 +39,18 @@ const UserProfileEdit = () => {
       !joinDate ||
       !role ||
       !birthDate ||
-      !selfDetails ||
-      !photoUrl
+      !selfDetails
     ) {
       return toast.warning("Please Enter All Required Information.");
     }
 
-    const userData = {
-      name,
-      email,
-      phone_no: phoneNo,
-      address,
-      join_date: joinDate,
-      role,
-      birth_date: birthDate,
-      about: selfDetails,
-      photoUrl,
-      facebook,
-      linkedin: linkedIn,
-      twitter,
-      github,
-      instra,
-    };
+    if(selectedImage)
 
-    axios
-      .patch("http://localhost:5000/api/user", userData, {
-        params: {
-          email: email
-        }
-      })
-      .then((res) => {
-        // console.log(res)
-        toast.success("Details Update Successfully.")
-      })
-      .catch((err) => {
-        console.log(err)
-        toast.error("Opps! Something Went Wrong. Please Try Again.")
-      });
-  };
-
-  if (loading) {
+  if (loading || userLoading) {
     return (
-        <div className="flex items-center justify-center w-screen h-screen">
-            <HashLoader color="#36d7b7" />
-        </div>
+      <div className="flex items-center justify-center w-screen h-screen">
+        <HashLoader color="#36d7b7" />
+      </div>
     );
   }
 
@@ -159,7 +82,8 @@ const UserProfileEdit = () => {
             name="email"
             defaultValue={user?.email}
             placeholder="Enter Your email"
-            className="input input-bordered w-full max-w-xs border-violet-900" readOnly
+            className="input input-bordered w-full max-w-xs border-violet-900"
+            readOnly
           />
         </div>
         <div className="form-control w-full max-w-xs">
@@ -167,11 +91,9 @@ const UserProfileEdit = () => {
             <span className="label-text">What is your Photo URL?</span>
           </label>
           <input
-            type="text"
-            name="photoUrl"
-            defaultValue={singleUser?.photoUrl}
-            placeholder="Enter Your Photo url"
-            className="input input-bordered w-full max-w-xs border-violet-900"
+            type="file"
+            className="file-input file-input-bordered w-full max-w-xs"
+            onChange={(e) => setSelectedImage(e.target.files[0])}
           />
         </div>
         <div className="form-control w-full max-w-xs">
@@ -193,8 +115,7 @@ const UserProfileEdit = () => {
           <input
             type="text"
             name="phoneNo"
-            defaultValue={singleUser?.
-              phone_no}
+            defaultValue={singleUser?.phone_no}
             placeholder="Enter Your Phone No"
             className="input input-bordered w-full max-w-xs border-violet-900"
           />

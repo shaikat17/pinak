@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context/AppAuthContext";
 import useUser from "../../hooks/useUser";
 
+// common profile image
+import commonProfile from "../../assets/images/commonProfile.png"
+
 const Navbar = () => {
   const { user, logOut } = useGlobalContext()
   const [singleUser] = useUser()
@@ -109,7 +112,7 @@ const Navbar = () => {
         {user && <div className="avatar">
           <div className="w-16 rounded-full border cursor-pointer border-orange-500">
             <Link to="/dashboard">
-            <img src={singleUser?.photoUrl} title={singleUser?.name} />
+            <img src={singleUser?.photoUrl ? singleUser?.photoUrl : commonProfile} title={singleUser?.name} />
             </Link>
           </div>
         </div>}
