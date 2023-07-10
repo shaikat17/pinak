@@ -3,22 +3,18 @@ import WelcomeUser from "../components/WelcomeUser";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { FaTrash } from "react-icons/fa";
+import useGalleryImage from "../../hooks/useGalleryImage";
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null)
-    const [allImages, setAllImages] = useState([])
 
     // getting all images
-    useEffect(() => {
-        axios.get("http://localhost:5000/api/gallery")
-        .then(res => setAllImages(res.data))
-        .catch(err => console.log(err))
-    },[])
+    const [allImage, , refetch] = useGalleryImage()
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        console.log(selectedImage.name.split(".")[0])
+        // console.log(selectedImage.name.split(".")[0])
 
         if(selectedImage) {
             const formData = new FormData();
@@ -32,7 +28,7 @@ const Gallery = () => {
                 formData
               )
               .then((res) => {
-                console.log(res)
+                // console.log(res)
                 const userData = {
                   ImageURL: res.data.data.display_url,
                   ImageID: res.data.data.id,
@@ -43,6 +39,7 @@ const Gallery = () => {
                   .post("http://localhost:5000/api/gallery", userData)
                   .then((res) => {
                     toast.success("Image Upload Successfully.");
+                    refetch()
                   })
                   .catch((err) => {
                     console.log(err);
@@ -55,6 +52,21 @@ const Gallery = () => {
         } else {
             toast.error("Please Select An Image")
         }
+    }
+
+    const handleDelete = (id) => {
+        axios.delete(`https://api.imgbb.com/1/image/${id}?key=${
+            import.meta.env.VITE_imgbb_key
+          }`)
+      .then((response) => {
+        console.log(response.data);
+        // Handle successful deletion
+        toast.success("Image Deleted Successfully.")
+      })
+      .catch((error) => {
+        console.log(error);
+        // Handle error
+      });
     }
 
   return (
@@ -88,7 +100,7 @@ const Gallery = () => {
       </tr>
     </thead>
     <tbody>
-      {allImages.map(image => {
+      {allImage.map(image => {
         return (
             <tr key={image._id}>
         <td>
@@ -103,7 +115,7 @@ const Gallery = () => {
         <td>
          {image.ImageName}
         </td>
-        <td><button className="flex items-center bg-red-500 p-1 rounded text-white font-semibold gap-2"><FaTrash />Delete</button></td>
+        <td><button className="flex items-center bg-red-500 p-1 rounded text-white font-semibold gap-2" onClick={(id) => handleDelete(image.ImageID)}><FaTrash />Delete</button></td>
       </tr>
         )
       })}
