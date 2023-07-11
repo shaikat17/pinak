@@ -5,10 +5,14 @@ import axios from "axios";
 import { useGlobalContext } from "../../context/AppAuthContext";
 import { HashLoader } from "react-spinners";
 import useUser from "../../hooks/useUser";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const UserProfileEdit = () => {
   const { user, loading } = useGlobalContext();
   const [selectedImage, setSelectedImage] = useState(null);
+
+  // axios interceptor
+  const [axiosSecure] = useAxiosSecure()
 
   // react query
   const [singleUser, userLoading, refetch] = useUser();
@@ -72,7 +76,7 @@ const UserProfileEdit = () => {
             instra,
           };
 
-          axios
+          axiosSecure
             .patch("/api/user", userData, {
               params: {
                 email: email,
@@ -106,7 +110,7 @@ const UserProfileEdit = () => {
         instra,
       };
   
-      axios
+      axiosSecure
         .patch("/api/user", userData, {
           params: {
             email: email,

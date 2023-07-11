@@ -2,13 +2,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import WelcomeUser from "../components/WelcomeUser";
 import { HashLoader } from "react-spinners";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const AllUser = () => {
   const [loading, setLoading] = useState(true);
   const [allUser, setAllUser] = useState([]);
+  const [axiosSecure] = useAxiosSecure()
 
   const getAllUser = () => {
-    axios("/api/user")
+    axiosSecure("/api/user")
       .then((res) => {
         // console.log(res.data)
         setAllUser(res.data);
@@ -23,7 +25,7 @@ const AllUser = () => {
   }, []);
 
   const handleStatus = (id, status) => {
-    axios
+    axiosSecure
       .patch(
         `/api/user-status`,
         { status },

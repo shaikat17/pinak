@@ -15,6 +15,7 @@ import image from "../../assets/images/asset 25.jpeg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const TestimonialSection = () => {
   const [name, setName] = useState('')
@@ -22,10 +23,13 @@ const TestimonialSection = () => {
   const [photoUrl, setPhotoUrl] = useState('')
   const [message, setMessage] = useState('')
   const [testimonialData, setTestimonialData] = useState([])
+  
+  // axios interceptors
+  const [axiosSecure] = useAxiosSecure()
 
   useEffect(() => {
     try {
-      axios("/api/testimonial")
+      axiosSecure("/api/testimonial")
       .then(res => setTestimonialData(res.data))
       .catch(err => console.log(err))
     } catch (error) {
@@ -46,7 +50,7 @@ const clearForm = () => {
 
     // console.log(name, profession, message, photoUrl)
     // clear the form 
-    axios.post("/api/testimonial", {
+    axiosSecure.post("/api/testimonial", {
       name, profession, message, photoUrl
     })
     .then(res => {

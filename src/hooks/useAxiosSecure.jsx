@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../contextAPI/AuthContext';
+import { useGlobalContext } from '../context/AppAuthContext';
 
 const axiosSecure = axios.create({
   baseURL: 'https://pinak-server.vercel.app', 
