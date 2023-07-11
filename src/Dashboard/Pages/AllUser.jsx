@@ -8,7 +8,7 @@ const AllUser = () => {
   const [allUser, setAllUser] = useState([]);
 
   const getAllUser = () => {
-    axios("https://pinak-server.vercel.app/api/user")
+    axios("/api/user")
       .then((res) => {
         // console.log(res.data)
         setAllUser(res.data);
@@ -25,7 +25,7 @@ const AllUser = () => {
   const handleStatus = (id, status) => {
     axios
       .patch(
-        `https://pinak-server.vercel.app/api/user-status`,
+        `/api/user-status`,
         { status },
         {
           params: {

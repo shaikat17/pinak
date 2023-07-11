@@ -10,7 +10,7 @@ const useGalleryImage = () => {
   } = useQuery({
     queryKey: ["allImage"],
     queryFn: async () => {
-      const res = await axios("https://pinak-server.vercel.app/api/gallery");
+      const res = await axios("/api/gallery");
       return res.data;
     },
   });

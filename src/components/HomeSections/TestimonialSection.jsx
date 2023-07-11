@@ -25,7 +25,7 @@ const TestimonialSection = () => {
 
   useEffect(() => {
     try {
-      axios("https://pinak-server.vercel.app/api/testimonial")
+      axios("/api/testimonial")
       .then(res => setTestimonialData(res.data))
       .catch(err => console.log(err))
     } catch (error) {
@@ -46,7 +46,7 @@ const clearForm = () => {
 
     // console.log(name, profession, message, photoUrl)
     // clear the form 
-    axios.post("https://pinak-server.vercel.app/api/testimonial", {
+    axios.post("/api/testimonial", {
       name, profession, message, photoUrl
     })
     .then(res => {

@@ -37,7 +37,7 @@ const DashboardGallery = () => {
           };
 
           axios
-            .post("https://pinak-server.vercel.app/api/gallery", userData)
+            .post("/api/gallery", userData)
             .then((res) => {
               toast.success("Image Upload Successfully.");
               refetch();

@@ -13,7 +13,7 @@ const useUser = () => {
     queryKey: ["singleUser"],
     enabled: !loading,
     queryFn: async () => {
-      const res = await axios("https://pinak-server.vercel.app/api/singleuser", {
+      const res = await axios("/api/singleuser", {
         params: {
           email: user?.email,
         },
