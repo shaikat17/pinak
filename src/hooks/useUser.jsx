@@ -1,9 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useGlobalContext } from "../context/AppAuthContext";
+import useAxiosSecure from "./useAxiosSecure";
 
 const useUser = () => {
   const { user, loading } = useGlobalContext();
+
+  // axios interceptors
+  const [axiosSecure] = useAxiosSecure()
 
   const {
     data: singleUser = [],
@@ -13,7 +17,7 @@ const useUser = () => {
     queryKey: ["singleUser"],
     enabled: !loading,
     queryFn: async () => {
-      const res = await axios("/api/singleuser", {
+      const res = await axiosSecure("/api/singleuser", {
         params: {
           email: user?.email,
         },
