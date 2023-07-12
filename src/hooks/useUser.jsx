@@ -17,7 +17,7 @@ const useUser = () => {
     queryKey: ["singleUser"],
     enabled: !loading,
     queryFn: async () => {
-      const res = await axiosSecure("/api/singleuser", {
+      const res = await axiosSecure("/api/singleUser", {
         params: {
           email: user?.email,
         },

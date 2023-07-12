@@ -4,10 +4,14 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { FaTrash } from "react-icons/fa";
 import useGalleryImage from "../../hooks/useGalleryImage";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const DashboardGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [singleImage, setSingleImage] = useState(null)
+
+  // axios interceptors
+  const [axiosSecure] = useAxiosSecure()
 
   // getting all images
   const [allImage, , refetch] = useGalleryImage();
@@ -36,7 +40,7 @@ const DashboardGallery = () => {
             ImageName: selectedImage.name.split(".")[0],
           };
 
-          axios
+          axiosSecure
             .post("/api/gallery", userData)
             .then((res) => {
               toast.success("Image Upload Successfully.");
