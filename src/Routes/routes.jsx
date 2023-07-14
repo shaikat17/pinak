@@ -16,7 +16,7 @@ import PrivateRoute from "../ProtectedRoute/PrivateRoute";
 import AllUser from "../Dashboard/Pages/AllUser";
 import DashboardGallery from "../Dashboard/Pages/DashboardGallery";
 import Gallery from "../pages/Gallery";
-import RecommendPinak from "../Dashboard/components/RecommendPinak";
+import RecommendPinak from "../Dashboard/Pages/RecommendPinak";
 
 export const router = createBrowserRouter([
   {

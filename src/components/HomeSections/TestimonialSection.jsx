@@ -14,22 +14,14 @@ import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import image from "../../assets/images/asset 25.jpeg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const TestimonialSection = () => {
-  const [name, setName] = useState('')
-  const [profession, setProfession] = useState('')
-  const [photoUrl, setPhotoUrl] = useState('')
-  const [message, setMessage] = useState('')
+
   const [testimonialData, setTestimonialData] = useState([])
-  
-  // axios interceptors
-  const [axiosSecure] = useAxiosSecure()
 
   useEffect(() => {
     try {
-      axiosSecure("/api/testimonial")
+      axios("https://pinak-server.vercel.app/api/testimonial")
       .then(res => setTestimonialData(res.data))
       .catch(err => console.log(err))
     } catch (error) {
@@ -37,35 +29,9 @@ const TestimonialSection = () => {
     }
   })
 
-const clearForm = () => {
-  setName('');
-  setProfession('');
-  setPhotoUrl('');
-  setMessage('');
-}
-
-  const handleSubmit = (e) => {
-    // console.log(e.target)
-    e.preventDefault()
-
-    // console.log(name, profession, message, photoUrl)
-    // clear the form 
-    axiosSecure.post("/api/testimonial", {
-      name, profession, message, photoUrl
-    })
-    .then(res => {
-      // console.log(res)
-      toast.success("Thank You For Your Support.")
-    })
-    .catch(err => {
-      console.log(err)
-      toast.error("Something is wrong. Please try again.")
-    })
-    clearForm();
-  }
   return (
     <>
-      <dialog id="my_modal_3" className="modal">
+      {/* <dialog id="my_modal_3" className="modal">
         <form method="dialog" className="modal-box">
           <button name="close" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 hover:bg-orange-500 hover:text-white">
             ✕
@@ -77,7 +43,7 @@ const clearForm = () => {
             <textarea type="text" value={message} name="message" placeholder="Please Enter Your Message." className="p-2 border-b-2 border-orange-500 w-full mb-5 focus:outline-none" onChange={(e) => setMessage(e.target.value)}></textarea>
           <button  onClick={handleSubmit} className="bg-orange-500 p-2 text-white rounded">Submit</button>
         </form>
-      </dialog>
+      </dialog> */}
       <div className="flex flex-col-reverse md:flex-row items-center bg-gradient-to-b from-[#F9F9F9] to-white my-20 mx-8 lg:mx-28">
         <div className="w-full md:w-2/4 p-10 pt-20">
           <h6 className="text-gray-400 tracking-widest uppercase">
