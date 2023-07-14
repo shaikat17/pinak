@@ -21,6 +21,7 @@ const Dashboard = () => {
     { title: "Inbox", src: <FaEnvelope size={24} color="white" /> },
     { title: "Users", link: "/dashboard/alluser", src: <FaUsers size={25} color="white" />, gap: true },
     { title: "Gallery ", link: "/dashboard/gallery" , src: <FaImages size={24} color="white" /> },
+    { title: "All Recommendation", link: "/dashboard/all-recommends", src: <FaThumbsUp size={26} color="white" /> },
     { title: "Search", src: "Search" },
     { title: "Analytics", src: "Chart" },
     { title: "Files ", src: "Folder", gap: true },

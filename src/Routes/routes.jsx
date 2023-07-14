@@ -17,6 +17,7 @@ import AllUser from "../Dashboard/Pages/AllUser";
 import DashboardGallery from "../Dashboard/Pages/DashboardGallery";
 import Gallery from "../pages/Gallery";
 import RecommendPinak from "../Dashboard/Pages/RecommendPinak";
+import AllRecommends from "../Dashboard/Pages/AllRecommends";
 
 export const router = createBrowserRouter([
   {
@@ -88,6 +89,10 @@ export const router = createBrowserRouter([
       {
         path: "recommend",
         element: <RecommendPinak />,
+      },
+      {
+        path: "all-recommends",
+        element: <AllRecommends />,
       },
     ],
   },
