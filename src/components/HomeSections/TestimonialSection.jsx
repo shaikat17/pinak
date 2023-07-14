@@ -85,7 +85,7 @@ const clearForm = () => {
           </h6>
           <h3 className="text-[#606480] text-4xl mt-4 mb-10">Testimonial</h3>
           <button
-            className="bg-orange-500 p-2 cursor-pointer text-white rounded"
+            className="bg-orange-500 p-2 cursor-pointer hidden text-white rounded"
             onClick={() => window.my_modal_3.showModal()}
           >
             Recommend US
