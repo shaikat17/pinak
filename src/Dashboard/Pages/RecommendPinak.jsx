@@ -15,11 +15,11 @@ const RecommendPinak = () => {
   const [axiosSecure] = useAxiosSecure();
 
   const clearForm = () => {
-    console.log("hello")
+    // console.log("hello")
     setName("");
     setProfession("");
     setMessage("");
-    setSelectedImage(null)
+    setSelectedImage(null);
   };
 
   const handleSubmit = (e) => {
