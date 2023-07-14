@@ -24,6 +24,25 @@ const AllRecommends = () => {
     getAllRecommends()
   }, []);
 
+  const handleStatus = (id, status) => {
+    // console.log(id, status)
+    axiosSecure
+      .patch(
+        `/api/testimonial-status`,
+        { status },
+        {
+          params: {
+            id: id,
+          },
+        }
+      )
+      .then((res) => {
+        getAllRecommends()
+        // console.log(res)
+      })
+      .catch((err) => console.log(err));
+  };
+
 
   return (
     <div className="h-screen flex-1 pl-7 overflow-x-hidden">
@@ -89,7 +108,7 @@ const AllRecommends = () => {
                     </button>
                   </td>
                 </tr>
-              );
+              )
             })}
           </tbody>
         </table>

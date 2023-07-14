@@ -34,6 +34,7 @@ const AppAuthContextProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       // console.log('auth state change', currentUser);
       if(currentUser){
+        // console.log(currentUser)
         axios.post('https://pinak-server.vercel.app/api/jwt', {email: currentUser.email})
         .then(data =>{
             // console.log(data.data.token)

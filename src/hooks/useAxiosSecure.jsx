@@ -5,6 +5,7 @@ import { useGlobalContext } from '../context/AppAuthContext';
 
 const axiosSecure = axios.create({
   baseURL: 'https://pinak-server.vercel.app', 
+  // baseURL: 'http://localhost:5000', 
 });
 
 const useAxiosSecure = () => {
